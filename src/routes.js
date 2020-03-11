@@ -1,6 +1,6 @@
-import Home from './components/Home.vue';
+import Home from './views/Home.vue';
 
 
 export const routes = [
-  { path: '/home', component: Home, name: 'home' },
+  { path: '/', component: Home, name: 'home' },
 ];
