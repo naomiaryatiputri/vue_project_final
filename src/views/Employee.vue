@@ -30,7 +30,7 @@
 
           <!-- Main content -->
           <section class="content">
-
+						<app-table></app-table>
             
             
             
@@ -53,11 +53,13 @@
 <script>
 import AppHeader from './../components/header/Header.vue'
 import AppMenu from './../components/menu/Menu.vue'
+import AppTable from './../components/body/Table.vue'
 import AppFooter from './../components/footer/Footer.vue'
 export default {
     components:{
         AppHeader,
-        AppMenu,
+				AppMenu,
+				AppTable,
         AppFooter
 
     }
