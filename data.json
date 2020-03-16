@@ -1,10 +1,11 @@
 {
-  "employee" : [
+  "employees" : [
     {
       "id" : 1,
       "name" : "ana",
-      "email" : "/src/assets/monster/disruptor.png",
+      "image" : "/src/assets/monster/disruptor.png",
       "telp" : 87346345,
+      "email" : "ini.email@gmail.com",
       "address" : "Jl. Pendidikan 01",
       "gender": "Female",
       "birth": "08/06/93"
@@ -12,8 +13,9 @@
     {
       "id" : 2,
       "name" : "beno",
-      "email" : "/src/assets/monster/disruptor.png",
+      "image" : "/src/assets/monster/disruptor.png",
       "telp" : 87218736,
+      "email" : "ini.email@gmail.com",
       "address" : "Jl. Kesejahteraan 05",
       "gender": "Male",
       "birth": "24/11/96"
@@ -21,8 +23,9 @@
     {
       "id" : 3,
       "name" : "chloe",
-      "email" : "/src/assets/monster/disruptor.png",
+      "image" : "/src/assets/monster/disruptor.png",
       "telp" : 98732441,
+      "email" : "ini.email@gmail.com",
       "address" : "Jl. Damai 34",
       "gender": "Female",
       "birth": "13/10/94"
@@ -30,8 +33,9 @@
     {
       "id" : 4,
       "name" : "deva",
-      "email" : "/src/assets/monster/disruptor.png",
+      "image" : "/src/assets/monster/disruptor.png",
       "telp" : 87468723,
+      "email" : "ini.email@gmail.com",
       "address" : "Jl. Nusa 562",
       "gender": "Male",
       "birth": "09/03/95"
@@ -39,8 +43,9 @@
     {
       "id" : 5,
       "name" : "Erika",
-      "email" : "/src/assets/monster/disruptor.png",
+      "image" : "/src/assets/monster/disruptor.png",
       "telp" : 86324568,
+      "email" : "ini.email@gmail.com",
       "address" : "Jl. Bhineka 32",
       "gender": "Female",
       "birth": "08/08/94"
