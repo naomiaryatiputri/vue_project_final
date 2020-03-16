@@ -14,25 +14,23 @@
               <div class="row mb-2">
                 <!-- Header -->
                 <div class="col-sm-6">
-                  <h1>Employee</h1>
-                </div>
-                <!-- Breadcrums -->
-                <div class="col-sm-6">
-                  <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                    <li class="breadcrumb-item">Employee</li>
-                  </ol>
+                  <h1>Profile</h1>
                 </div>
               </div>
             </div>
           </section>
 
           <!-- Main content -->
-          <section class="content">
-						<app-table></app-table>
+          <section class="content ml-3 mr-4">
+						<app-form></app-form>
           </section>
           <!-- /.content -->
         </div>
+
+
+
+
+
 
         <!-- Footer -->
         <app-footer></app-footer>
@@ -42,15 +40,15 @@
 <script>
 import AppHeader from './../components/header/Header.vue'
 import AppMenu from './../components/menu/Menu.vue'
-import AppTable from './../components/body/Table.vue'
+import AppForm from './../components/body/Form.vue'
 import AppFooter from './../components/footer/Footer.vue'
-
 export default {
-  components:{
-      AppHeader,
-			AppMenu,
-			AppTable,
-      AppFooter
-  },
+    components:{
+        AppHeader,
+				AppMenu,
+				AppForm,
+        AppFooter
+
+    }
 }
 </script>

@@ -10,10 +10,12 @@
     <!-- Sidebar user (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="../../assets/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+        <a href="/data-details">
+          <img src="../../assets/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+        </a>
       </div>
       <div class="info">
-        <a href="#" class="d-block">Rifky Agasta</a>
+        <a href="/data-details" class="d-block">Rifky Agasta</a>
       </div>
     </div>
 
@@ -23,7 +25,7 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
         <li class="nav-item has-treeview">
-          <a href="#" class="nav-link">
+          <a href="/home" class="nav-link">
             <i class="nav-icon fas fa-laptop"></i>
             <p>
               Dashboard
@@ -57,8 +59,8 @@
             </p>
           </a>
         </li>
-        <li class="nav-item has-treeview menu-open">
-          <a href="#" class="nav-link active">
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
             <p>
               Attendence
@@ -119,7 +121,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="data-details" class="nav-link">
                 <p>Add New Applicant</p>
               </a>
             </li>
