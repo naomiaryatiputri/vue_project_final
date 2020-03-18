@@ -8,7 +8,9 @@
       "email" : "ini.email@gmail.com",
       "address" : "Jl. Pendidikan 01",
       "gender": "Female",
-      "birth": "08/06/93"
+      "birth": "08/06/93",
+      "departement": "creative",
+      "status": "contract"
     },
     {
       "id" : 2,
@@ -18,7 +20,9 @@
       "email" : "ini.email@gmail.com",
       "address" : "Jl. Kesejahteraan 05",
       "gender": "Male",
-      "birth": "24/11/96"
+      "birth": "24/11/96",
+      "departement": "creative",
+      "status": "permanent"
     },
     {
       "id" : 3,
@@ -28,7 +32,9 @@
       "email" : "ini.email@gmail.com",
       "address" : "Jl. Damai 34",
       "gender": "Female",
-      "birth": "13/10/94"
+      "birth": "13/10/94",
+      "departement": "creative",
+      "status": "permanent"
     },
     {
       "id" : 4,
@@ -38,7 +44,9 @@
       "email" : "ini.email@gmail.com",
       "address" : "Jl. Nusa 562",
       "gender": "Male",
-      "birth": "09/03/95"
+      "birth": "09/03/95",
+      "departement": "creative",
+      "status": "probation"
     },
     {
       "id" : 5,
@@ -48,7 +56,117 @@
       "email" : "ini.email@gmail.com",
       "address" : "Jl. Bhineka 32",
       "gender": "Female",
-      "birth": "08/08/94"
+      "birth": "08/08/94",
+      "departement": "creative",
+      "status": "permanent"
+    },
+    {
+      "id" : 6,
+      "name" : "ana",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87346345,
+      "email" : "ini.email@gmail.com",
+      "address" : "Jl. Pendidikan 01",
+      "gender": "Female",
+      "birth": "08/06/93",
+      "departement": "creative",
+      "status": "probation"
+    },
+    {
+      "id" : 7,
+      "name" : "beno",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87218736,
+      "email" : "ini.email@gmail.com",
+      "address" : "Jl. Kesejahteraan 05",
+      "gender": "Male",
+      "birth": "24/11/96",
+      "departement": "creative",
+      "status": "contract"
+    },
+    {
+      "id" : 8,
+      "name" : "chloe",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 98732441,
+      "email" : "ini.email@gmail.com",
+      "address" : "Jl. Damai 34",
+      "gender": "Female",
+      "birth": "13/10/94",
+      "departement": "creative",
+      "status": "probation"
+    },
+    {
+      "id" : 9,
+      "name" : "deva",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87468723,
+      "email" : "ini.email@gmail.com",
+      "address" : "Jl. Nusa 562",
+      "gender": "Male",
+      "birth": "09/03/95",
+      "departement": "creative",
+      "status": "permanent"
+    },
+    {
+      "id" : 10,
+      "name" : "Erika",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 86324568,
+      "email" : "ini.email@gmail.com",
+      "address" : "Jl. Bhineka 32",
+      "gender": "Female",
+      "birth": "08/08/94",
+      "departement": "creative",
+      "status": "permanent"
+    },
+    {
+      "id" : 11,
+      "name" : "beno",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87218736,
+      "email" : "ini.email@gmail.com",
+      "address" : "Jl. Kesejahteraan 05",
+      "gender": "Male",
+      "birth": "24/11/96",
+      "departement": "creative",
+      "status": "permanent"
+    },
+    {
+      "id" : 12,
+      "name" : "chloe",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 98732441,
+      "email" : "ini.email@gmail.com",
+      "address" : "Jl. Damai 34",
+      "gender": "Female",
+      "birth": "13/10/94",
+      "departement": "creative",
+      "status": "contract"
+    },
+    {
+      "id" : 13,
+      "name" : "deva",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87468723,
+      "email" : "ini.email@gmail.com",
+      "address" : "Jl. Nusa 562",
+      "gender": "Male",
+      "birth": "09/03/95",
+      "departement": "creative",
+      "status": "permanent"
+    },
+    {
+      "id" : 14,
+      "name" : "Erika",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 86324568,
+      "email" : "ini.email@gmail.com",
+      "address" : "Jl. Bhineka 32",
+      "gender": "Female",
+      "birth": "08/08/94",
+      "departement": "creative",
+      "status": "probation"
     }
   ],
   "absence" : [
@@ -95,5 +213,11 @@
       "username": "tamu",
       "password": "tamu"
     }
+  ],
+  
+  "status": [
+    "permanent",
+    "probation",
+    "contract"
   ]
 }

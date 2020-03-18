@@ -94,10 +94,6 @@
     	  </div>
 				<div class="card-body">
 					<div class="form-group">
-						<label for="inputName">Position</label>
-						<input type="text" class="form-control" id="inputName" placeholder="Enter name">
-					</div>
-					<div class="form-group">
 						<label for="inputName">Departement</label>
 							<select class="form-control select2" style="width: 100%;">
             	  <option selected="selected ">creative</option>
@@ -109,8 +105,9 @@
 					<div class="form-group">
 						<label for="inputName">Status</label>
 							<select class="form-control select2" style="width: 100%;">
-            	  <option selected="selected">karyawan</option>
-            	  <option>manajerial</option>
+            	  <option selected="selected">permanent</option>
+            	  <option>contract</option>
+            	  <option>probabation</option>
             	</select>
 					</div>
 					<div class="form-group">

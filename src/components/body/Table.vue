@@ -2,8 +2,19 @@
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">DataTable with default features</h3>
+        <div class="card-header row">
+          <div class="col-sm-6 row">
+            <div class="btn-group col-md-offset-6">
+              <button v-for="(item, key) in getStatus" :key="key" @click="setActiveStatus(item)" type="button" class="btn text-md bg-info btn-default text-capitalize"> {{ item }} </button>
+            </div>
+          </div>
+          <div class="col-sm-6 row justify-content-end">
+            <div class="btn-group col-md-offset-6">
+              <button type="button" class="btn text-md btn-default"> Eksport CSV </button>
+              <button type="button" class="btn text-md btn-default"> Import CSV </button>
+              <button type="button" class="btn text-md btn-default"> Eksport CSV </button>
+            </div>
+          </div>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -16,6 +27,8 @@
               <th>Address</th>
               <th>Gender</th>
               <th>Birth</th>
+              <th>Departement</th>
+              <th>Status</th>
             </tr>
             </thead>
             <tbody>
@@ -26,6 +39,8 @@
               <td> {{item.address}} </td>
               <td> {{item.gender}} </td>
               <td> {{item.birth}} </td>
+              <td> {{item.departement}} </td>
+              <td> {{item.status}} </td>
             </tr>
             </tbody>
           </table>
@@ -48,16 +63,21 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   computed: {
     ...mapGetters ({
-      getEmployees : 'getEmployees'
+      getEmployees : 'getEmployees',
+      getStatus : 'getStatus',
+      getActiveStatus : 'getActiveStatus'
     })
   },
   methods: {
     ...mapActions ({
-      fetchEmployees : 'fetchEmployees'
+      fetchEmployees : 'fetchEmployees',
+      fetchStatus: 'fetchStatus',
+      setActiveStatus : 'setActiveStatus'
     })
   },
   created () {
-    this.fetchEmployees()
+    this.fetchEmployees(),
+    this.fetchStatus()
   },
 }
 </script>

@@ -33,10 +33,10 @@
               <div class="col-12 col-sm-6 col-md-4">
                 <!-- col 1 -->
                 <div class="info-box mb-4">
-                  <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                  <span class="info-box-icon"><i class="fas fa-users"></i></span>
                   <div class="info-box-content">
-                    <span class="info-box-text">Total Employee</span>
-                    <span class="info-box-number">2,000</span>
+                    <span class="info-box-text text-xl">Total Employee</span>
+                    <span class="info-box-number text-xl">2,000</span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>
@@ -45,10 +45,10 @@
               <div class="col-12 col-sm-6 col-md-4">
               
                 <div class="info-box mb-4">
-                  <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                  <span class="info-box-icon"><i class="fas fa-user"></i></span>
                   <div class="info-box-content">
-                    <span class="info-box-text">Out Today</span>
-                    <span class="info-box-number">2,000</span>
+                    <span class="info-box-text text-xl">Out Today</span>
+                    <span class="info-box-number text-xl">2,000</span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>
@@ -56,10 +56,10 @@
               <!-- col 3 -->
               <div class="col-12 col-sm-6 col-md-4">
                 <div class="info-box mb-4">
-                  <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                  <span class="info-box-icon"><i class="fas fa-building "></i></span>
                   <div class="info-box-content">
-                    <span class="info-box-text">Today's Present</span>
-                    <span class="info-box-number">2,000</span>
+                    <span class="info-box-text text-xl">Today's Present</span>
+                    <span class="info-box-number text-xl">2,000</span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>

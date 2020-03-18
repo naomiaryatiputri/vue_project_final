@@ -6,13 +6,20 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state:{
-    employees:[]
+    employees:[],
+    status: [],
+    activeStatus: 'all',
   },
   getters:{
-    getEmployees(state){
+    getEmployees(state) {
       return state.employees
     },
-
+    getStatus(state) {
+			return state.status 
+    },
+    getActiveStatus(state) {
+			return state.activeStatus
+		},
   },
   actions: {
     fetchEmployees ({commit}) {
@@ -22,11 +29,27 @@ export const store = new Vuex.Store({
 					commit ('fillEmployees', response.data)
 				} 
 			)
-    }
+    },
+		fetchStatus ({commit}) {
+      axios.get('http://localhost:3000/status')
+        .then(response => {
+					commit ('fillStatus', response.data)  
+				} 
+			)
+    },
+    setActiveStatus({commit}, payload) {
+			commit ('setActiveStatus', payload)
+		},
   },
   mutations: {
     fillEmployees (state, payload) {
 			state.employees = payload
+    },
+    fillStatus (state, payload) {
+			state.status = payload
+    },
+    setActiveStatus (state, payload) {
+			state.activeStatus = payload
 		},
   }
 
