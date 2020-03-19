@@ -17,12 +17,8 @@
                   <h1>Employee</h1>
                 </div>
                 <!-- Breadcrums -->
-                <div class="col-sm-6">
-                  <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                    <li class="breadcrumb-item">Employee</li>
-                  </ol>
-                </div>
+
+
               </div>
             </div>
           </section>
@@ -45,6 +41,7 @@ import AppMenu from './../components/menu/Menu.vue'
 import AppTable from './../components/body/Table.vue'
 import AppFooter from './../components/footer/Footer.vue'
 
+
 export default {
   components:{
       AppHeader,
@@ -52,5 +49,6 @@ export default {
 			AppTable,
       AppFooter
   },
+
 }
 </script>
