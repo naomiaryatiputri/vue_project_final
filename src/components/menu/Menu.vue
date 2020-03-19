@@ -10,7 +10,7 @@
     <!-- Sidebar user (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <a href="/data-details">
+        <a href="#">
           <img src="../../assets/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
         </a>
       </div>
@@ -53,6 +53,8 @@
         <li class="nav-item">
           <a href="/employee" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
+             
+             
             <p>
               Employees
               <!-- <span class="right badge badge-danger">New</span> -->

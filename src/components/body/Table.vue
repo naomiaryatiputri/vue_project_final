@@ -5,14 +5,14 @@
         <div class="card-header row">
           <div class="col-sm-6 row">
             <div class="btn-group col-md-offset-6">
-              <button v-for="(item, key) in getStatus" :key="key" @click="setActiveStatus(item)" type="button" class="btn text-md bg-info btn-default text-capitalize"> {{ item }} </button>
+              <button v-for="(item, key) in getStatus" :key="key" @click="setActiveStatus(item)" type="button" class="btn text-md btn-default text-capitalize"> {{ item }} </button>
             </div>
           </div>
           <div class="col-sm-6 row justify-content-end">
             <div class="btn-group col-md-offset-6">
-              <button type="button" class="btn text-md btn-default"> Eksport CSV </button>
-              <button type="button" class="btn text-md btn-default"> Import CSV </button>
-              <button type="button" class="btn text-md btn-default"> Eksport CSV </button>
+              <button type="button" class="btn bg-info text-md btn-default"> Eksport CSV </button>
+              <button type="button" class="btn bg-info text-md btn-default"> Import CSV </button>
+              <button type="button" class="btn bg-info text-md btn-default"> Eksport CSV </button>
             </div>
           </div>
         </div>
@@ -32,8 +32,8 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="item in getEmployees" :key="item.id">
-              <td><a href="#"> {{item.name}} </a></td>
+            <tr v-for="item in getData" :key="item.id">
+              <td><a href="/profile"> {{item.name}} </a></td>
               <td> {{item.telp}} </td>
               <td> {{item.email}} </td>
               <td> {{item.address}} </td>
@@ -61,19 +61,31 @@
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
+  data() {
+    return{
+      activeStatus: "permanent"
+    }
+  },
   computed: {
     ...mapGetters ({
       getEmployees : 'getEmployees',
       getStatus : 'getStatus',
       getActiveStatus : 'getActiveStatus'
-    })
+    }),
+    getData() {
+      return this.getEmployees.filter(ob=>ob.status===this.activeStatus)
+    },
   },
   methods: {
     ...mapActions ({
       fetchEmployees : 'fetchEmployees',
       fetchStatus: 'fetchStatus',
       setActiveStatus : 'setActiveStatus'
-    })
+    }),
+    setActiveStatus(a) {
+      // console.log (a)
+      this.activeStatus=a;
+    }
   },
   created () {
     this.fetchEmployees(),

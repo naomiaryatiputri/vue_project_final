@@ -7,8 +7,9 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state:{
     employees:[],
-    status: [],
+    status:[],
     activeStatus: 'all',
+    details:[]
   },
   getters:{
     getEmployees(state) {
@@ -19,7 +20,10 @@ export const store = new Vuex.Store({
     },
     getActiveStatus(state) {
 			return state.activeStatus
-		},
+    },
+    getDetails(state) {
+      return state.details
+    }
   },
   actions: {
     fetchEmployees ({commit}) {
@@ -39,7 +43,10 @@ export const store = new Vuex.Store({
     },
     setActiveStatus({commit}, payload) {
 			commit ('setActiveStatus', payload)
-		},
+    },
+    addToDetails({commit}, payload) {
+      commit ('addToDetails', payload)
+    }
   },
   mutations: {
     fillEmployees (state, payload) {
@@ -50,7 +57,9 @@ export const store = new Vuex.Store({
     },
     setActiveStatus (state, payload) {
 			state.activeStatus = payload
-		},
+    },
+    addToDetails (state, payload) {
+      state.details.push(payload)
+    }
   }
-
 });

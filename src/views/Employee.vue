@@ -40,7 +40,7 @@ import AppHeader from './../components/header/Header.vue'
 import AppMenu from './../components/menu/Menu.vue'
 import AppTable from './../components/body/Table.vue'
 import AppFooter from './../components/footer/Footer.vue'
-import { mapGetters, mapActions } from 'vuex'
+
 
 export default {
   components:{

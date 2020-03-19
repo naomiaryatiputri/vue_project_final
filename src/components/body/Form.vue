@@ -117,8 +117,23 @@
 			
   		</div>
 		</div>	
-
-
-		
 	</div>
 </template>
+
+<script>
+import { mapGetters, mapActions } from 'vuex'
+
+export default {
+	computed: {
+		...mapGetters ({
+			getDetails: 'getDetails'
+		}),
+	},
+	methods: {
+		...mapActions({
+			addToDetails : 'addToDetails'
+		})
+	}
+	
+}
+</script>
