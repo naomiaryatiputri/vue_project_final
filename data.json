@@ -221,20 +221,20 @@
     "contract"
   ],
 
-  "statusAplicant": [
-    "unprocessed",
+  "statusApplicant": [
     "psychotest",
     "finish",
-    "interview"
+    "interview",
+    "unprocessed"
   ],
 
-  "aplicant" : [
+  "applicant" : [
     {
       "id" : 1,
       "name" : "angel",
       "image" : "/src/assets/monster/disruptor.png",
       "telp" : 87346345,
-      "email" : "ini.aplicant@gmail.com",
+      "email" : "ini.applicant@gmail.com",
       "address" : "Jl. Pendidikan 01",
       "gender": "Female",
       "birth": "08/06/93",
@@ -246,7 +246,7 @@
       "name" : "jordy",
       "image" : "/src/assets/monster/disruptor.png",
       "telp" : 87218736,
-      "email" : "ini.aplicant@gmail.com",
+      "email" : "ini.applicant@gmail.com",
       "address" : "Jl. Kesejahteraan 05",
       "gender": "Male",
       "birth": "24/11/96",
@@ -258,7 +258,7 @@
       "name" : "dita",
       "image" : "/src/assets/monster/disruptor.png",
       "telp" : 98732441,
-      "email" : "ini.aplicant@gmail.com",
+      "email" : "ini.applicant@gmail.com",
       "address" : "Jl. Damai 34",
       "gender": "Female",
       "birth": "13/10/94",
@@ -270,7 +270,7 @@
       "name" : "dito",
       "image" : "/src/assets/monster/disruptor.png",
       "telp" : 87468723,
-      "email" : "ini.aplicant@gmail.com",
+      "email" : "ini.applicant@gmail.com",
       "address" : "Jl. Nusa 562",
       "gender": "Male",
       "birth": "09/03/95",
@@ -282,7 +282,7 @@
       "name" : "joan",
       "image" : "/src/assets/monster/disruptor.png",
       "telp" : 86324568,
-      "email" : "ini.aplicant@gmail.com",
+      "email" : "ini.applicant@gmail.com",
       "address" : "Jl. Bhineka 32",
       "gender": "Female",
       "birth": "08/08/94",
@@ -294,7 +294,7 @@
       "name" : "lala",
       "image" : "/src/assets/monster/disruptor.png",
       "telp" : 87346345,
-      "email" : "ini.aplicant@gmail.com",
+      "email" : "ini.applicant@gmail.com",
       "address" : "Jl. Pendidikan 01",
       "gender": "Female",
       "birth": "08/06/93",
@@ -306,7 +306,7 @@
       "name" : "dimas",
       "image" : "/src/assets/monster/disruptor.png",
       "telp" : 87218736,
-      "email" : "ini.aplicant@gmail.com",
+      "email" : "ini.applicant@gmail.com",
       "address" : "Jl. Kesejahteraan 05",
       "gender": "Male",
       "birth": "24/11/96",

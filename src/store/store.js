@@ -10,7 +10,10 @@ export const store = new Vuex.Store({
     status:[],
     activeStatus: 'all',
     details:[],
-    add:{}
+    add:{},
+    applicant:[],
+    statusApplicant:[],
+    activeStatusApplicant:'all'
   },
   getters:{
     getEmployees(state) {
@@ -22,6 +25,17 @@ export const store = new Vuex.Store({
     getActiveStatus(state) {
 			return state.activeStatus
     },
+
+    getApplicant(state) {
+      return state.applicant
+    },
+    getStatusApplicant(state) {
+			return state.statusApplicant 
+    },
+    getActiveStatusApplicant(state) {
+			return state.activeStatusApplicant
+    },
+
     getDetails(state) {
       return state.details
     },
@@ -30,23 +44,6 @@ export const store = new Vuex.Store({
     }
   },
   actions: {
-    // async add({dispatch}, payload){
-    //   try{
-    //     await axios.post('http://localhost:3000/employees',{
-    //       "name": payload.name,
-    //       "email": payload.email,
-    //       "telp":payload.telp,
-    //       "address":payload.address,
-    //       "gender":payload.gender,
-    //       "birth":payload.birth,
-    //       "depart":payload.depart,
-    //       "status":payload.statusE
-    //     })
-    //   }catch(e){
-    //     console.log(e.response)
-    //   }
-    //   dispatch('fect')
-    // },
     fetchEmployees ({commit}) {
       console.log("employee")
 			axios.get('http://localhost:3000/employees')
@@ -65,6 +62,26 @@ export const store = new Vuex.Store({
     setActiveStatus({commit}, payload) {
 			commit ('setActiveStatus', payload)
     },
+
+    fetchApplicant ({commit}) {
+      console.log("applicant")
+			axios.get('http://localhost:3000/applicant')
+				.then(response => {
+					commit ('fillApplicant', response.data)
+				} 
+			)
+    },
+		fetchStatusApplicant ({commit}) {
+      axios.get('http://localhost:3000/statusApplicant')
+        .then(response => {
+					commit ('fillStatusApplicant', response.data)  
+				} 
+			)
+    },
+    setActiveStatusApplicant({commit}, payload) {
+			commit ('setActiveStatusApplicant', payload)
+    },
+
     addToDetails({commit}, payload) {
       commit ('addToDetails', payload)
     }
@@ -79,6 +96,17 @@ export const store = new Vuex.Store({
     setActiveStatus (state, payload) {
 			state.activeStatus = payload
     },
+    
+    fillApplicant (state, payload) {
+			state.applicant = payload
+    },
+    fillStatusApplicant (state, payload) {
+			state.statusApplicant = payload
+    },
+    setActiveStatusApplicant (state, payload) {
+			state.activeStatusApplicant = payload
+    },
+
     addToDetails (state, payload) {
       state.details.push(payload)
     },
