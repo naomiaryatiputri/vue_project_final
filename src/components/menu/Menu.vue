@@ -83,19 +83,15 @@
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
-        </li>
-        <li class="nav-item has-treeview">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-edit"></i>
-            <p>
-              Forms
-              <i class="fas fa-angle-left right"></i>
-            </p>
-          </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="data-details" class="nav-link">
-                <p>Add New Applicant</p>
+              <a href="/employee" class="nav-link">
+                <p>View</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/data-details" class="nav-link">
+                <p>Add</p>
               </a>
             </li>
           </ul>
