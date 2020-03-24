@@ -83,28 +83,6 @@
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <p>Unprocessed</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <p>Scheduled to Psycho Test</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <p>Unprocessed</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <p>Finish</p>
-              </a>
-            </li>
-          </ul>
         </li>
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
