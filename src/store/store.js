@@ -9,7 +9,8 @@ export const store = new Vuex.Store({
     employees:[],
     status:[],
     activeStatus: 'all',
-    details:[]
+    details:[],
+    add:{}
   },
   getters:{
     getEmployees(state) {
@@ -23,9 +24,29 @@ export const store = new Vuex.Store({
     },
     getDetails(state) {
       return state.details
+    },
+    getAddNew(state) {
+      return state.add
     }
   },
   actions: {
+    // async add({dispatch}, payload){
+    //   try{
+    //     await axios.post('http://localhost:3000/employees',{
+    //       "name": payload.name,
+    //       "email": payload.email,
+    //       "telp":payload.telp,
+    //       "address":payload.address,
+    //       "gender":payload.gender,
+    //       "birth":payload.birth,
+    //       "depart":payload.depart,
+    //       "status":payload.statusE
+    //     })
+    //   }catch(e){
+    //     console.log(e.response)
+    //   }
+    //   dispatch('fect')
+    // },
     fetchEmployees ({commit}) {
       console.log("employee")
 			axios.get('http://localhost:3000/employees')
@@ -60,6 +81,9 @@ export const store = new Vuex.Store({
     },
     addToDetails (state, payload) {
       state.details.push(payload)
+    },
+    addNew (state, payload) {
+      state.getAddNew = payload
     }
   }
 });

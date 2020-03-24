@@ -15,9 +15,7 @@
     	    <h3 class="profile-username text-center">Nina Mcintire</h3>
     	    <p class="text-muted text-center">Software Engineer</p>
     	  </div>
-    	  <!-- /.card-body -->
     	</div>
-    	<!-- /.card -->
 		</div>
 
 	
@@ -26,40 +24,38 @@
 				<div class="card-header">
     	    <div class="card-title text-xl">Profile</div>
     	  </div>
-    	  <!-- /.card-header -->
+    	  <!-- form 1 -->
 				<div class="card-body">
 					<div class="form-group">
 						<label for="inputName">Name</label>
-						<input type="text" class="form-control" id="inputName" placeholder="Enter name">
+						<input type="text" class="form-control" v-model="name" placeholder="Enter name">
 					</div>
 					<div class="form-group">
 						<label for="inputEmail">Email</label>
-						<input type="text" class="form-control" id="inputtext" placeholder="Enter email">
+						<input type="text" class="form-control" v-model="email" placeholder="Enter email">
 					</div>
 					<div class="form-group">
 						<label for="inputTelp">Telephone</label>
-						<input type="text" class="form-control" id="inputTelp" placeholder="Enter telephone">
+						<input type="text" class="form-control" v-model="telp" placeholder="Enter telephone">
 					</div>
 					<div class="form-group">
 						<label for="inputAddress">Address</label>
-						<input type="text" class="form-control" id="inputAddress" placeholder="Enter Addres">
+						<input type="text" class="form-control" v-model="address" placeholder="Enter Addres">
 					</div>
-				<!-- Submit -->
 					<div class="row">
     	      <div class="col-sm-6">
     	        <label for="inputBirth">Gender</label>
-							<!-- radio -->
     	        <div class="form-group clearfix col">
 								<div class="row">
     	          	<div class="icheck-primary d-inline mr-4">
-    	          	  <input type="radio" id="radioPrimary1" name="r1" checked>
-    	          	  <label for="radioPrimary1">
+    	          	  <input type="radio" id="male" v-model="gender" name="r1" checked>
+    	          	  <label for="male">
 											Male
     	          	  </label>
     	          	</div>
     	          	<div class="icheck-primary d-inline">
-    	          	  <input type="radio" id="radioPrimary2" name="r1">
-    	          	  <label for="radioPrimary2">
+    	          	  <input type="radio" id="female" v-model="gender" name="r2">
+    	          	  <label for="female">
 											Female
     	          	  </label>
     	          	</div>
@@ -69,7 +65,7 @@
 					</div>
 					<div class="form-group">
 						<label for="inputBirth">Birth</label>
-						<input type="text" class="form-control" id="inputBirth" placeholder="Enter birth">
+						<input type="text" class="form-control" v-model="birth" placeholder="Enter birth">
 					</div>
 					<!-- Input Image -->
 					<div class="form-group">
@@ -87,31 +83,31 @@
 				</div>
 			</div>
 
-
+			<!-- form 2 -->
 			<div class="card card-primary card-outline">
 				<div class="card-header">
     	    <div class="card-title text-xl">Occupation</div>
     	  </div>
 				<div class="card-body">
 					<div class="form-group">
-						<label for="inputName">Departement</label>
-							<select class="form-control select2" style="width: 100%;">
-            	  <option selected="selected ">creative</option>
+						<label for="inputDepartement">Departement</label>
+							<select v-model="depart" class="form-control select2" style="width: 100%;">
+            	  <option selected="selected">creative</option>
             	  <option>it</option>
             	  <option>marketing</option>
             	  <option>accounting</option>
             	</select>
 					</div>
 					<div class="form-group">
-						<label for="inputName">Status</label>
-							<select class="form-control select2" style="width: 100%;">
+						<label for="inputStatus">Status</label>
+							<select v-model="statusE" class="form-control select2" style="width: 100%;">
             	  <option selected="selected">permanent</option>
             	  <option>contract</option>
             	  <option>probabation</option>
             	</select>
 					</div>
 					<div class="form-group">
-						<button type="button" class="btn btn-block bg-gradient-success">Submit</button>
+						<button type="button" class="btn btn-block bg-gradient-success">Add</button>
 					</div>
 				</div>
 			
@@ -125,15 +121,15 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
 	computed: {
-		...mapGetters ({
-			getDetails: 'getDetails'
-		}),
-	},
-	methods: {
-		...mapActions({
-			addToDetails : 'addToDetails'
-		})
-	}
+			...mapGetters ({
+				getDetails: 'getDetails'
+			}),
+		},
+		methods: {
+			...mapActions({
+				addToDetails : 'addToDetails'
+			})
+		}
 	
 }
 </script>
