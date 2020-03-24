@@ -39,7 +39,7 @@
               <td> {{item.address}} </td>
               <td> {{item.gender}} </td>
               <td> {{item.birth}} </td>
-              <td> {{item.departement}} </td>
+              <td> {{item.depart}} </td>
               <td> {{item.status}} </td>
             </tr>
             </tbody>
