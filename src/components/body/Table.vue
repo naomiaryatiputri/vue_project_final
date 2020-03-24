@@ -29,6 +29,7 @@
               <th>Birth</th>
               <th>Departement</th>
               <th>Status</th>
+              <th></th>
             </tr>
             </thead>
             <tbody>
@@ -41,6 +42,14 @@
               <td> {{item.birth}} </td>
               <td> {{item.depart}} </td>
               <td> {{item.status}} </td>
+              <td>
+                <a href="/data-details">
+                  <span class="fas fa-pencil-alt mr-2"></span>
+                </a>
+                <a href="#">
+                  <span class="fas fa-times"></span>
+                </a>
+              </td>
             </tr>
             </tbody>
           </table>

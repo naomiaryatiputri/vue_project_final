@@ -172,28 +172,28 @@
   "absence" : [
     {
       "id" : 1,
-      "in" : "Erika",
-      "out" : "/src/assets/monster/disruptor.png"
+      "in" : "true",
+      "out" : "true"
     },
     {
-      "id" : 1,
-      "in" : "Erika",
-      "out" : "/src/assets/monster/disruptor.png"
+      "id" : 2,
+      "in" : "true",
+      "out" : "true"
     },
     {
-      "id" : 1,
-      "in" : "Erika",
-      "out" : "/src/assets/monster/disruptor.png"
+      "id" : 3,
+      "in" : "true",
+      "out" : "true"
     },
     {
-      "id" : 1,
-      "in" : "Erika",
-      "out" : "/src/assets/monster/disruptor.png"
+      "id" : 4,
+      "in" : "true",
+      "out" : "true"
     },
     {
-      "id" : 1,
-      "in" : "Erika",
-      "out" : "/src/assets/monster/disruptor.png"
+      "id" : 5,
+      "in" : "true",
+      "out" : "true"
     }
 
   ],
@@ -205,8 +205,8 @@
     },
     {
       "id": 2,
-      "username": "deny",
-      "password": "deny"
+      "username": "ana",
+      "password": "admin"
     },
     {
       "id": 3,
@@ -219,5 +219,99 @@
     "permanent",
     "probation",
     "contract"
+  ],
+
+  "statusAplicant": [
+    "unprocessed",
+    "psychotest",
+    "finish",
+    "interview"
+  ],
+
+  "aplicant" : [
+    {
+      "id" : 1,
+      "name" : "angel",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87346345,
+      "email" : "ini.aplicant@gmail.com",
+      "address" : "Jl. Pendidikan 01",
+      "gender": "Female",
+      "birth": "08/06/93",
+      "applyTo": "creative",
+      "status": "unprocessed"
+    },
+    {
+      "id" : 2,
+      "name" : "jordy",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87218736,
+      "email" : "ini.aplicant@gmail.com",
+      "address" : "Jl. Kesejahteraan 05",
+      "gender": "Male",
+      "birth": "24/11/96",
+      "applyTo": "it",
+      "status": "psychotest"
+    },
+    {
+      "id" : 3,
+      "name" : "dita",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 98732441,
+      "email" : "ini.aplicant@gmail.com",
+      "address" : "Jl. Damai 34",
+      "gender": "Female",
+      "birth": "13/10/94",
+      "applyTo": "creative",
+      "status": "interview"
+    },
+    {
+      "id" : 4,
+      "name" : "dito",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87468723,
+      "email" : "ini.aplicant@gmail.com",
+      "address" : "Jl. Nusa 562",
+      "gender": "Male",
+      "birth": "09/03/95",
+      "applyTo": "it",
+      "status": "unprocessed"
+    },
+    {
+      "id" : 5,
+      "name" : "joan",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 86324568,
+      "email" : "ini.aplicant@gmail.com",
+      "address" : "Jl. Bhineka 32",
+      "gender": "Female",
+      "birth": "08/08/94",
+      "applyTo": "creative",
+      "status": "psychotest"
+    },
+    {
+      "id" : 6,
+      "name" : "lala",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87346345,
+      "email" : "ini.aplicant@gmail.com",
+      "address" : "Jl. Pendidikan 01",
+      "gender": "Female",
+      "birth": "08/06/93",
+      "applyTo": "accounting",
+      "status": "finish"
+    },
+    {
+      "id" : 7,
+      "name" : "dimas",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87218736,
+      "email" : "ini.aplicant@gmail.com",
+      "address" : "Jl. Kesejahteraan 05",
+      "gender": "Male",
+      "birth": "24/11/96",
+      "applyTo": "marketing",
+      "status": "psychotest"
+    }
   ]
 }
