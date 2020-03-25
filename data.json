@@ -13,30 +13,6 @@
       "status": "contract"
     },
     {
-      "id": 2,
-      "name": "beno",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 87218736,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Kesejahteraan 05",
-      "gender": "Male",
-      "birth": "24/11/96",
-      "depart": "creative",
-      "status": "permanent"
-    },
-    {
-      "id": 3,
-      "name": "chloe",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 98732441,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Damai 34",
-      "gender": "Female",
-      "birth": "13/10/94",
-      "depart": "creative",
-      "status": "permanent"
-    },
-    {
       "id": 4,
       "name": "deva",
       "image": "/src/assets/monster/disruptor.png",
@@ -47,18 +23,6 @@
       "birth": "09/03/95",
       "depart": "creative",
       "status": "probation"
-    },
-    {
-      "id": 5,
-      "name": "Erika",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 86324568,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Bhineka 32",
-      "gender": "Female",
-      "birth": "08/08/94",
-      "depart": "creative",
-      "status": "permanent"
     },
     {
       "id": 6,
@@ -97,42 +61,6 @@
       "status": "probation"
     },
     {
-      "id": 9,
-      "name": "deva",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 87468723,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Nusa 562",
-      "gender": "Male",
-      "birth": "09/03/95",
-      "depart": "creative",
-      "status": "permanent"
-    },
-    {
-      "id": 10,
-      "name": "Erika",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 86324568,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Bhineka 32",
-      "gender": "Female",
-      "birth": "08/08/94",
-      "depart": "creative",
-      "status": "permanent"
-    },
-    {
-      "id": 11,
-      "name": "beno",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 87218736,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Kesejahteraan 05",
-      "gender": "Male",
-      "birth": "24/11/96",
-      "depart": "creative",
-      "status": "permanent"
-    },
-    {
       "id": 12,
       "name": "chloe",
       "image": "/src/assets/monster/disruptor.png",
@@ -143,18 +71,6 @@
       "birth": "13/10/94",
       "depart": "creative",
       "status": "contract"
-    },
-    {
-      "id": 13,
-      "name": "deva",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 87468723,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Nusa 562",
-      "gender": "Male",
-      "birth": "09/03/95",
-      "depart": "creative",
-      "status": "permanent"
     },
     {
       "id": 14,
@@ -217,18 +133,6 @@
       "status": "permanent"
     },
     {
-      "id": 19,
-      "name": "Rifky",
-      "image": "",
-      "telp": "087889651940",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "male",
-      "birth": "",
-      "depart": "accounting",
-      "status": "permanent"
-    },
-    {
       "id": 20,
       "name": "Rifky",
       "image": "",
@@ -251,18 +155,6 @@
       "birth": "",
       "depart": "accounting",
       "status": "probabation"
-    },
-    {
-      "id": 22,
-      "name": "Rifky",
-      "image": "",
-      "telp": "087889651940",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "male",
-      "birth": "",
-      "depart": "creative",
-      "status": "permanent"
     },
     {
       "id": 23,
@@ -551,30 +443,6 @@
       "birth": "",
       "depart": "",
       "status": ""
-    },
-    {
-      "id": 47,
-      "name": "Rifky",
-      "image": "",
-      "telp": "087889651940",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "male",
-      "birth": "2020-03-09",
-      "depart": "creative",
-      "status": "permanent"
-    },
-    {
-      "name": "Rifky",
-      "image": "",
-      "telp": "0002321321",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "female",
-      "birth": "2020-03-18",
-      "depart": "it",
-      "status": "contract",
-      "id": 48
     }
   ],
   "absence": [

@@ -50,7 +50,7 @@
                   
                 
                 <a href="#">
-                  <span class="fas fa-times"></span>
+                  <span @click="del(item.id)" class="fas fa-times"></span>
                 </a>
               </td>
             </tr>
@@ -63,16 +63,10 @@
   </div>
 </template>
 <script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true,
-      "autoWidth": false,
-    });
-    $(this).find(".dataTables_empty").parents('tbody').empty();
-  });
+ 
 
 import { mapGetters, mapActions } from 'vuex'
-
+import axios from 'axios'
 export default {
   data() {
     return{
@@ -98,9 +92,17 @@ export default {
     setActiveStatus(a) {
       // console.log (a)
       this.activeStatus=a;
+    },
+    del(id){
+    
+        axios.delete('http://localhost:3000/employees/' + id).then(res =>{
+          alert("Berhasil didelete")
+          this.created()
+          this.getData()
+        })
     }
   },
-  created () {
+  created() {
     this.fetchEmployees(),
     this.fetchStatus()
   },
