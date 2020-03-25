@@ -43,9 +43,12 @@
               <td> {{item.depart}} </td>
               <td> {{item.status}} </td>
               <td>
-                <a href="/data-details">
-                  <span class="fas fa-pencil-alt mr-2"></span>
-                </a>
+                <router-link :to="{name: 'employeeedit', params: { id: item.id }}" tag="a">
+                  <span class="fas fa-pencil-alt mr-2">
+                  </span>
+                </router-link>
+                  
+                
                 <a href="#">
                   <span class="fas fa-times"></span>
                 </a>
@@ -65,6 +68,7 @@
       "responsive": true,
       "autoWidth": false,
     });
+    $(this).find(".dataTables_empty").parents('tbody').empty();
   });
 
 import { mapGetters, mapActions } from 'vuex'

@@ -48,7 +48,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="/data-details" class="nav-link">
+              <a href="/employee/add" class="nav-link">
                 <p>Add</p>
               </a>
             </li>

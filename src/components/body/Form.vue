@@ -29,19 +29,19 @@
 		        <div class="card-body">
 		            <div class="form-group">
 		                <label for="inputName">Name</label>
-		                <input type="text" class="form-control" id="inputName" placeholder="Enter name">
+		                <input type="text" class="form-control" id="inputName" name="name" placeholder="Enter name" v-model="form.name">
 		            </div>
 		            <div class="form-group">
 		                <label for="inputEmail">Email</label>
-		                <input type="text" class="form-control" id="inputtext" placeholder="Enter email">
+		                <input type="text" class="form-control" id="inputtext" name="email" placeholder="Enter email" v-model="form.email">
 		            </div>
 		            <div class="form-group">
 		                <label for="inputTelp">Telephone</label>
-		                <input type="text" class="form-control" id="inputTelp" placeholder="Enter telephone">
+		                <input type="number" class="form-control" id="inputTelp" name="telp" placeholder="Enter telephone" v-model="form.telp">
 		            </div>
 		            <div class="form-group">
 		                <label for="inputAddress">Address</label>
-		                <input type="text" class="form-control" id="inputAddress" placeholder="Enter Addres">
+		                <input type="text" class="form-control" id="inputAddress" name="address" placeholder="Enter Address" v-model="form.address">
 		            </div>
 
 		            <div class="row">
@@ -50,13 +50,13 @@
 		                    <div class="form-group clearfix col">
 		                        <div class="row">
 		                            <div class="icheck-primary d-inline mr-4">
-		                                <input type="radio" id="radioPrimary1" name="r1" checked>
+		                                <input type="radio" id="radioPrimary1" name="gender" checked value="male" v-model="form.gender">
 		                                <label for="radioPrimary1">
 		                                    Male
 		                                </label>
 		                            </div>
 		                            <div class="icheck-primary d-inline">
-		                                <input type="radio" id="radioPrimary2" name="r1">
+		                                <input type="radio" id="radioPrimary2" name="gender" value="female" v-model="form.gender">
 		                                <label for="radioPrimary2">
 		                                    Female
 		                                </label>
@@ -66,15 +66,20 @@
 		                </div>
 		            </div>
 		            <div class="form-group">
-		                <label for="inputBirth">Birth</label>
-		                <input type="text" class="form-control" id="inputBirth" placeholder="Enter birth">
+		              <label>Birth</label>
+
+		              
+		                <input type="date" class="form-control" id="date" v-model="form.birth">
+		              
+		              <!-- /.input group -->
 		            </div>
+
 		            <!-- Input Image -->
 		            <div class="form-group">
 		                <label for="exampleInputFile">File input</label>
 		                <div class="input-group">
 		                    <div class="custom-file">
-		                        <input type="file" class="custom-file-input" id="exampleInputFile">
+		                        <input type="file" class="custom-file-input" id="customFile" name="image">
 		                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
 		                    </div>
 		                    <div class="input-group-append">
@@ -92,7 +97,7 @@
 		        <div class="card-body">
 		            <div class="form-group">
 		                <label for="inputName">Departement</label>
-		                <select class="form-control select2" style="width: 100%;">
+		                <select class="form-control select2" style="width: 100%;" v-model="form.depart">
 		                    <option selected="selected ">creative</option>
 		                    <option>it</option>
 		                    <option>marketing</option>
@@ -101,14 +106,14 @@
 		            </div>
 		            <div class="form-group">
 		                <label for="inputName">Status</label>
-		                <select class="form-control select2" style="width: 100%;">
+		                <select class="form-control select2" style="width: 100%;" v-model="form.status">
 		                    <option selected="selected">permanent</option>
 		                    <option>contract</option>
 		                    <option>probabation</option>
 		                </select>
 		            </div>
 		            <div class="form-group">
-		                <button type="button" class="btn btn-block bg-gradient-success">Submit</button>
+		                <button type="submit" class="btn btn-block bg-gradient-success">Submit</button>
 		            </div>
 		        </div>
 
@@ -151,17 +156,20 @@ export default {
 			addToDetails : 'addToDetails'
 		}),
 		add(){
-	      	axios.post('http://localhost:3000/employees/', this.form).then(res => {
-	        	this.load()
-	        	this.form.name=''
-	        	this.form.image=''
-	        	this.form.telp=''
-	        	this.form.email=''
-	        	this.form.address=''
-	        	this.form.gender=''
-	        	this.form.birth=''
-	        	this.form.depart=''
-	        	this.form.status=''
+
+	      	axios.post('http://localhost:3000/employees/', this.form).then(res =>{
+	      		alert("Data Berhasil Dimasukkan")
+		        this.form.name = ''
+		        this.form.image = ''
+		        this.form.telp = ''
+		        this.form.email = ''
+		        this.form.address = ''
+		        this.form.gender = ''
+		        this.form.birth = ''
+		        this.form.depart = ''
+		        this.form.status = ''
+		        
+
 	      	})
 	    },
 	}
