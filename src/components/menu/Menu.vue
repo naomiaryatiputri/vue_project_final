@@ -64,13 +64,18 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="/attendance" class="nav-link">
                 <p>Presence</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="/leave-request" class="nav-link">
                 <p>Leave Request</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/leave-request/add" class="nav-link">
+                <p>Add Leave Request</p>
               </a>
             </li>
           </ul>
