@@ -161,7 +161,6 @@ export default {
 			addToDetails : 'addToDetails'
 		}),
 		add(){
-
 	      	axios.post('http://localhost:3000/employees/', this.form).then(res =>{
 	      		alert("Data Berhasil Dimasukkan")
 		        this.form.name = ''
@@ -177,6 +176,7 @@ export default {
 
 	      	})
 	    },
+	 
 	}
 	
 }
