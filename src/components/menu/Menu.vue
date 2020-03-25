@@ -85,7 +85,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/employee" class="nav-link">
+              <a href="/applicant" class="nav-link">
                 <p>View</p>
               </a>
             </li>
