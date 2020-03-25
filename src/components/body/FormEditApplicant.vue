@@ -18,7 +18,7 @@
 		</div>
 		
 		<div class="col-12 col-lg-9">
-			<form @submit.prevent="add">
+			<form @submit.prevent="update">
 		    <div class="card card-primary card-outline">
 		        <div class="card-header">
 		            <div class="card-title text-xl">Profile</div>
@@ -50,13 +50,13 @@
 		                    <div class="form-group clearfix col">
 		                        <div class="row">
 		                            <div class="icheck-primary d-inline mr-4">
-		                                <input type="radio" id="radioPrimary1" name="gender" checked value="male" v-model="form.gender">
+		                                <input type="radio" id="radioPrimary1" name="gender" value="male" v-model="form.gender" :checked="form.gender == 'male'">
 		                                <label for="radioPrimary1">
 		                                    Male
 		                                </label>
 		                            </div>
 		                            <div class="icheck-primary d-inline">
-		                                <input type="radio" id="radioPrimary2" name="gender" value="female" v-model="form.gender">
+		                                <input type="radio" id="radioPrimary2" name="gender" value="female" v-model="form.gender" :checked="form.gender == 'female'">
 		                                <label for="radioPrimary2">
 		                                    Female
 		                                </label>
@@ -149,7 +149,7 @@ export default {
 	          gender: '',
 	          birth: '',
 	          applyTo: '',
-	          status: 'unprocessed'
+	          status: ''
 	        }
 	    }
 	},
@@ -158,24 +158,34 @@ export default {
 			getDetails: 'getDetails'
 		}),
 	},
+	mounted: function () {
+        this.load()
+    },
 	methods: {
-		...mapActions({
-			addToDetails : 'addToDetails'
-		}),
-		add(){
-
-	      	axios.post('http://localhost:3000/applicant/', this.form).then(res =>{
-	      		alert("Data Berhasil Dimasukkan")
-		        this.form.name = ''
-		        this.form.image = ''
-		        this.form.telp = ''
-		        this.form.email = ''
-		        this.form.address = ''
-		        this.form.gender = ''
-		        this.form.birth = ''
-		        this.form.applyTo = ''
-	      	})
-	    },
+		load(){
+            axios.get('http://localhost:3000/applicant?id='+this.$route.params.id).then(res => {
+            this.form.name = res.data[0].name
+            this.form.telp = res.data[0].telp
+            this.form.email = res.data[0].email
+            this.form.address = res.data[0].address
+            this.form.gender = res.data[0].gender
+            this.form.birth = res.data[0].birth
+            this.form.applyTo = res.data[0].applyTo
+            this.form.status = res.data[0].status
+          }).catch ((err) => {
+            alert("error")
+            
+          })
+  		  
+        },
+        update(form){ 
+           return axios.put('http://localhost:3000/applicant/' + this.$route.params.id , this.form).then(res => {
+           alert("Data Berhasil diupdate")
+          }).catch((err) => {
+            console.log(err);
+            
+          })
+        }
 	}
 	
 }

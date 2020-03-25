@@ -3,9 +3,8 @@ import Applicant from './views/Applicant.vue';
 import Employee from './views/Employee.vue';
 import EmployeeAdd from './views/EmployeeAdd.vue';
 import EmployeeEdit from './views/EmployeeEdit.vue';
-import Applicant from './views/Employee.vue';
 import ApplicantAdd from './views/ApplicantAdd.vue';
-import ApplicantEdit from './views/EmployeeEdit.vue';
+import ApplicantEdit from './views/ApplicantEdit.vue';
 import DataDetails from './views/DataDetails.vue';
 import Login from './views/Login.vue';
 
@@ -18,6 +17,6 @@ export const routes = [
   { path: '/employee/edit/:id', component: EmployeeEdit, name: 'employeeedit' },
   { path: '/applicant', component: Employee, name:'applicant'},
   { path: '/applicant/add', component: ApplicantAdd, name: 'applicantadd' },
-  { path: '/applicant/edit/:id', component: ApplicantAdd, name: 'applicantedit' },
+  { path: '/applicant/edit/:id', component: ApplicantEdit, name: 'applicantedit' },
   { path: '/data-details', component: DataDetails, name: 'data-details' },
 ];

@@ -43,7 +43,7 @@
               <td> {{item.applyTo}} </td>
               <td> {{item.status}} </td>
               <td>
-                <router-link :to="{name: 'employeeedit', params: { id: item.id }}" tag="a">
+                <router-link :to="{name: 'applicantedit', params: { id: item.id }}" tag="a">
                   <span class="fas fa-pencil-alt mr-2">
                   </span>
                 </router-link>

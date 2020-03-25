@@ -179,6 +179,11 @@ export default {
         AppMenu,
         AppFooter
 
-    }
+    },
+    beforeRouteEnter (to, from, next) {
+      $cookies.get('login') ? next() : next({ name: 'login', query: { redirect: 'home' } })
+    },
 }
+
+
 </script>

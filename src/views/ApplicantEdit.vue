@@ -13,22 +13,18 @@
               <div class="row mb-2">
                 <!-- Header -->
                 <div class="col-sm-6">
-                  <h1>Employee</h1>
+                  <h1>Profile</h1>
                 </div>
-                <!-- Breadcrums -->
-
-
               </div>
             </div>
           </section>
 
           <!-- Main content -->
-          <section class="content">
-						<app-table></app-table>
+          <section class="content ml-3 mr-4">
+						<app-form></app-form>
           </section>
           <!-- /.content -->
         </div>
-
         <!-- Footer -->
         <app-footer></app-footer>
     </div>
@@ -37,21 +33,14 @@
 <script>
 import AppHeader from './../components/header/Header.vue'
 import AppMenu from './../components/menu/Menu.vue'
-import AppTable from './../components/body/Table.vue'
+import AppForm from './../components/body/FormEditApplicant.vue'
 import AppFooter from './../components/footer/Footer.vue'
-
-
 export default {
-  components:{
-      AppHeader,
-			AppMenu,
-			AppTable,
-      AppFooter
-  },
-  beforeRouteEnter (to, from, next) {
-        $cookies.get('login') ? next() : next({ name: 'login', query: { redirect: 'home' } })
-    },
-
-
+    components:{
+        AppHeader,
+				AppMenu,
+				AppForm,
+        AppFooter
+    }
 }
 </script>

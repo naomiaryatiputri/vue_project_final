@@ -36,6 +36,10 @@
 		                <input type="text" class="form-control" id="inputtext" name="email" placeholder="Enter email" v-model="form.email">
 		            </div>
 		            <div class="form-group">
+		                <label for="inputPassword">Password Login</label>
+		                <input type="password" class="form-control" id="inputtext" name="password" placeholder="Enter password" v-model="form.password">
+		            </div>
+		            <div class="form-group">
 		                <label for="inputTelp">Telephone</label>
 		                <input type="number" class="form-control" id="inputTelp" name="telp" placeholder="Enter telephone" v-model="form.telp">
 		            </div>
@@ -142,6 +146,7 @@ export default {
 	          birth: '',
 	          depart: '',
 	          status: '',
+	          password: ''
 	        },
 	    }
 	},
@@ -165,6 +170,7 @@ export default {
             this.form.depart = res.data[0].depart
             this.form.status = res.data[0].status
             this.form.name = res.data[0].name
+            this.form.password = res.data[0].password
           }).catch ((err) => {
             alert("error")
             

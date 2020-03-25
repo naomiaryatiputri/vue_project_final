@@ -1,150 +1,7 @@
 {
   "employees": [
     {
-      "id": 4,
-      "name": "deva",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 87468723,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Nusa 562",
-      "gender": "Male",
-      "birth": "1091-06-10",
-      "depart": "creative",
-      "status": "probation"
-    },
-    {
-      "id": 6,
-      "name": "ana",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 87346345,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Pendidikan 01",
-      "gender": "Female",
-      "birth": "08/06/93",
-      "depart": "creative",
-      "status": "probation"
-    },
-    {
-      "id": 8,
-      "name": "chloe",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 98732441,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Damai 34",
-      "gender": "Female",
-      "birth": "13/10/94",
-      "depart": "creative",
-      "status": "probation"
-    },
-    {
-      "id": 12,
-      "name": "chloe",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 98732441,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Damai 34",
-      "gender": "Female",
-      "birth": "13/10/94",
-      "depart": "creative",
-      "status": "contract"
-    },
-    {
-      "id": 14,
-      "name": "Erika",
-      "image": "/src/assets/monster/disruptor.png",
-      "telp": 86324568,
-      "email": "ini.email@gmail.com",
-      "address": "Jl. Bhineka 32",
-      "gender": "Female",
-      "birth": "08/08/94",
-      "depart": "creative",
-      "status": "probation"
-    },
-    {
-      "id": 15,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 16,
-      "name": "Gasta",
-      "image": "",
-      "telp": "02121212",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl kenagan",
-      "gender": null,
-      "birth": "2020202",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "name": "Gasta",
-      "image": "",
-      "telp": "02121212",
-      "email": "agastaibrahim@gmail.com",
-      "address": "JL KENANGAN",
-      "gender": "male",
-      "birth": "120120120",
-      "depart": "creative",
-      "status": "permanent",
-      "id": 17
-    },
-    {
-      "id": 18,
-      "name": "Rifky",
-      "image": "",
-      "telp": "087889651940",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "male",
-      "birth": "",
-      "depart": "creative",
-      "status": "permanent"
-    },
-    {
-      "id": 20,
-      "name": "Rifky",
-      "image": "",
-      "telp": "087889651940",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "male",
-      "birth": "",
-      "depart": "accounting",
-      "status": "permanent"
-    },
-    {
-      "id": 21,
-      "name": "Rifky",
-      "image": "",
-      "telp": "087889651949",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "male",
-      "birth": "",
-      "depart": "accounting",
-      "status": "probabation"
-    },
-    {
-      "name": "Rifky",
-      "image": "",
-      "telp": "087889651950",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "female",
-      "birth": "2020-06-10",
-      "depart": "it",
-      "status": "contract",
-      "id": 23
-    },
-    {
+      "id": 24,
       "name": "Rifky",
       "image": "",
       "telp": "087889651950",
@@ -154,302 +11,37 @@
       "birth": "2016-10-04",
       "depart": "it",
       "status": "contract",
-      "id": 24
-    },
-    {
-      "id": 25,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 26,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 27,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 28,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 29,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 30,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 31,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 32,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 33,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 34,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 35,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 36,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 37,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 38,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 39,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 40,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 41,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 42,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 43,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 44,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 45,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 46,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
+      "password": "kompas"
     }
   ],
-  "absence" : [
+  "absence": [
     {
-      "id" : 1,
-      "in" : "true",
-      "out" : "true"
+      "id": 1,
+      "in": "true",
+      "out": "true"
     },
     {
-      "id" : 2,
-      "in" : "true",
-      "out" : "true"
+      "id": 2,
+      "in": "true",
+      "out": "true"
     },
     {
-      "id" : 3,
-      "in" : "true",
-      "out" : "true"
+      "id": 3,
+      "in": "true",
+      "out": "true"
     },
     {
-      "id" : 4,
-      "in" : "true",
-      "out" : "true"
+      "id": 4,
+      "in": "true",
+      "out": "true"
     },
     {
-      "id" : 5,
-      "in" : "true",
-      "out" : "true"
+      "id": 5,
+      "in": "true",
+      "out": "true"
     }
-
   ],
-  "users" : [
+  "users": [
     {
       "id": 1,
       "username": "admin",
@@ -466,7 +58,6 @@
       "password": "tamu"
     }
   ],
-  
   "status": [
     "permanent",
     "probation",
@@ -478,87 +69,74 @@
     "interview",
     "unprocessed"
   ],
-
-  "applicant" : [
+  "applicant": [
     {
-      "id" : 1,
-      "name" : "angel",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 87346345,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Pendidikan 01",
-      "gender": "Female",
-      "birth": "08/06/93",
-      "applyTo": "creative",
+      "id": 1,
+      "name": "angel",
+      "image": "",
+      "telp": 87346345,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Pendidikan 01",
+      "gender": "female",
+      "birth": "1231-02-22",
+      "applyTo": "it",
       "status": "unprocessed"
     },
     {
-      "id" : 2,
-      "name" : "jordy",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 87218736,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Kesejahteraan 05",
-      "gender": "Male",
-      "birth": "24/11/96",
-      "applyTo": "it",
-      "status": "psychotest"
-    },
-    {
-      "id" : 3,
-      "name" : "dita",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 98732441,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Damai 34",
+      "id": 3,
+      "name": "dita",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 98732441,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Damai 34",
       "gender": "Female",
       "birth": "13/10/94",
       "applyTo": "creative",
       "status": "interview"
     },
     {
-      "id" : 4,
-      "name" : "dito",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 87468723,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Nusa 562",
+      "id": 4,
+      "name": "dito",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 87468723,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Nusa 562",
       "gender": "Male",
       "birth": "09/03/95",
       "applyTo": "it",
       "status": "unprocessed"
     },
     {
-      "id" : 5,
-      "name" : "joan",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 86324568,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Bhineka 32",
+      "id": 5,
+      "name": "joan",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 86324568,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Bhineka 32",
       "gender": "Female",
       "birth": "08/08/94",
       "applyTo": "creative",
       "status": "psychotest"
     },
     {
-      "id" : 6,
-      "name" : "lala",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 87346345,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Pendidikan 01",
+      "id": 6,
+      "name": "lala",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 87346345,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Pendidikan 01",
       "gender": "Female",
       "birth": "08/06/93",
       "applyTo": "accounting",
       "status": "finish"
     },
     {
-      "id" : 7,
-      "name" : "dimas",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 87218736,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Kesejahteraan 05",
+      "id": 7,
+      "name": "dimas",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 87218736,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Kesejahteraan 05",
       "gender": "Male",
       "birth": "24/11/96",
       "applyTo": "marketing",
