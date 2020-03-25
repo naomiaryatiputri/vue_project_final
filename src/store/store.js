@@ -17,6 +17,7 @@ export const store = new Vuex.Store({
     details:[],
     add:{}
   },
+	
   getters:{
     getEmployees(state) {
       return state.employees
@@ -45,6 +46,7 @@ export const store = new Vuex.Store({
       return state.add
     }
   },
+	
   actions: {
     fetchEmployees ({commit}) {
       console.log("employee")
@@ -88,6 +90,7 @@ export const store = new Vuex.Store({
       commit ('addToDetails', payload)
     }
   },
+	
   mutations: {
     fillEmployees (state, payload) {
 			state.employees = payload
