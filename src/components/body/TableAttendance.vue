@@ -61,11 +61,11 @@
   		  <!-- /.card-body -->
 			</div>
 		  <div class="row justify-content-between">
-				<div class="row">	
-					<button type="button" class="btn  btn-info btn-sm">Check In</button>
+				<div>	
+					<button type="button" class="btn btn-info btn-sm">Check In</button>
 				</div>
-				<div class="row justify-content-end">	
-					<button type="button" class="btn  btn-info btn-sm">Check Out</button>
+				<div>	
+					<button type="button" class="btn btn-info btn-sm">Check Out</button>
 				</div>
 			</div>
     </div>

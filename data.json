@@ -61,18 +61,6 @@
       "status": "probation"
     },
     {
-      "id": 15,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
       "id": 16,
       "name": "Gasta",
       "image": "",
@@ -157,18 +145,6 @@
       "id": 24
     },
     {
-      "id": 25,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
       "id": 26,
       "name": "Rifky",
       "image": "",
@@ -199,78 +175,6 @@
       "telp": "",
       "email": "agastaibrahim@gmail.com",
       "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 29,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 30,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 31,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 32,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 33,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 34,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
       "gender": "",
       "birth": "",
       "depart": "",
@@ -349,54 +253,6 @@
       "status": ""
     },
     {
-      "id": 41,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "",
-      "address": "",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 42,
-      "name": "Rifky",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 43,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
-      "id": 44,
-      "name": "",
-      "image": "",
-      "telp": "",
-      "email": "agastaibrahim@gmail.com",
-      "address": "jl datuk kuningan no 61",
-      "gender": "",
-      "birth": "",
-      "depart": "",
-      "status": ""
-    },
-    {
       "id": 45,
       "name": "Rifky",
       "image": "",
@@ -421,6 +277,55 @@
       "status": ""
     }
   ],
+
+  "leave-request" : [
+    {
+      "id": "6",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "pending"
+    },
+    {
+      "id": "8",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "approve"
+    },
+    {
+      "id": "4",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "reject"
+    },
+    {
+      "id": "12",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "peding"
+    },
+    {
+      "id": "14",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "approve"
+    }
+  ],
+
   "absence" : [
     {
       "id" : 1,
@@ -447,8 +352,8 @@
       "in" : "true",
       "out" : "true"
     }
-
   ],
+
   "users" : [
     {
       "id": 1,
@@ -478,6 +383,12 @@
     "finish",
     "interview",
     "unprocessed"
+  ],
+
+  "statusLeaveRequest": [
+    "approve",
+    "reject",
+    "pending"
   ],
 
   "applicant" : [
