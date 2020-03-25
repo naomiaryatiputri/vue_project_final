@@ -109,7 +109,6 @@
       "status": ""
     },
     {
-      "id": 17,
       "name": "Gasta",
       "image": "",
       "telp": "02121212",
@@ -118,7 +117,8 @@
       "gender": "male",
       "birth": "120120120",
       "depart": "creative",
-      "status": "permanent"
+      "status": "permanent",
+      "id": 17
     },
     {
       "id": 18,
@@ -494,14 +494,47 @@
     "probation",
     "contract"
   ],
-  "test": [
+  "applicant": [
     {
       "id": 1,
-      "name": "gasta"
+      "name": "ana",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 87346345,
+      "email": "ini.email@gmail.com",
+      "address": "Jl. Pendidikan 01",
+      "gender": "Female",
+      "birth": "08/06/93",
+      "cv": "",
+      "status": ""
     },
     {
       "id": 2,
-      "name": "sd"
+      "name": "Rifky",
+      "image": "",
+      "telp": "08992323",
+      "email": "agastaibrahim@gmail.com",
+      "address": "jl datuk kuningan no 61",
+      "gender": "male",
+      "birth": "2322-03-12",
+      "status": "0"
+    }
+  ],
+  "statusapplicant": [
+    {
+      "id": 1,
+      "status": "unprocessed"
+    },
+    {
+      "id": 2,
+      "name": "psycho test"
+    },
+    {
+      "id": 3,
+      "name": "interview"
+    },
+    {
+      "id": 4,
+      "name": "finish"
     }
   ]
 }
