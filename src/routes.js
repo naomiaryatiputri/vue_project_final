@@ -1,5 +1,6 @@
 import Home from './views/Home.vue';
 import Applicant from './views/Applicant.vue';
+import Attendance from './views/Attendance.vue';
 import Employee from './views/Employee.vue';
 import EmployeeAdd from './views/EmployeeAdd.vue';
 import EmployeeEdit from './views/EmployeeEdit.vue';
@@ -9,6 +10,7 @@ import Login from './views/Login.vue';
 export const routes = [
   { path: '/login', component: Login, name: 'login' },
   { path: '/applicant', component: Applicant, name:'applicant'},  
+  { path: '/attendance', component: Attendance, name:'attendance'},  
   { path: '/home', component: Home, name: 'home' },
   { path: '/employee', component: Employee, name:'employee'},
   { path: '/employee/add', component: DataDetails, name: 'employeeadd' },

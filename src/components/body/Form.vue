@@ -157,21 +157,20 @@ export default {
 		}),
 		add(){
 
-	      	axios.post('http://localhost:3000/employees/', this.form).then(res =>{
-	      		alert("Data Berhasil Dimasukkan")
-		        this.form.name = ''
-		        this.form.image = ''
-		        this.form.telp = ''
-		        this.form.email = ''
-		        this.form.address = ''
-		        this.form.gender = ''
-		        this.form.birth = ''
-		        this.form.depart = ''
-		        this.form.status = ''
-		        
-
-	      	})
-	    },
+	    axios.post('http://localhost:3000/employees/', this.form).then(res =>{
+	    	alert("Data Berhasil Dimasukkan")
+	      this.form.name = ''
+	      this.form.image = ''
+	      this.form.telp = ''
+	      this.form.email = ''
+	      this.form.address = ''
+	      this.form.gender = ''
+	      this.form.birth = ''
+	      this.form.depart = ''
+	      this.form.status = ''      
+			})
+			
+	  },
 	}
 	
 }
