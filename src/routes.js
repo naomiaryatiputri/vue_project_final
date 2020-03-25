@@ -18,7 +18,7 @@ export const routes = [
   { path: '/employee/edit/:id', component: EmployeeEdit, name: 'employeeedit' },
   { path: '/data-details', component: DataDetails, name: 'data-details' },
   { path: '/home', component: Home, name: 'home' },
-  { path: '/login', component: Login, name: 'login' },
+  { path: '/', component: Login, name: 'login' },
   { path: '/leave-request', component: LeaveRequest , name: 'leave-request' },
   { path: '/leave-request/add', component: AddLeaveRequest , name: 'leave-requestadd' },
 

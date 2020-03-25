@@ -34,7 +34,7 @@
             </thead>
             <tbody>
             <tr v-for="item in getDataA" :key="item.id">
-              <td><a href="/profile"> {{item.name}} </a></td>
+              <td>{{item.name}}</td>
               <td> {{item.telp}} </td>
               <td> {{item.email}} </td>
               <td> {{item.address}} </td>
@@ -70,7 +70,7 @@ import axios from 'axios'
 export default {
   data() {
     return{
-      activeStatus: "permanent"
+      activeStatusA: "psychotest"
     }
   },
   computed: {
@@ -80,8 +80,13 @@ export default {
       getActiveStatusA : 'getActiveStatusA'
     }),
     getDataA() {
-      return this.getApplicant.filter(ob=>ob.statusA===this.activeStatusA)
-    },
+      return this.getApplicant.filter(ob=>ob.status===this.activeStatusA)
+    }
+    // getDataA(){
+    //   var tampung = ""
+    //   tampung = this.getApplicant.filter(ob=>{return ob.statusA==this.activeStatusA})
+    //   return tampung
+    // }
   },
   methods: {
     ...mapActions ({
@@ -94,12 +99,11 @@ export default {
       this.activeStatusA=a;
     },
     del(id){
-    
-        axios.delete('http://localhost:3000/applicant/' + id).then(res =>{
-          alert("Berhasil didelete")
-          this.created()
-          this.getDataA()
-        })
+      axios.delete('http://localhost:3000/applicant/' + id).then(res =>{
+        alert("Berhasil didelete")
+        this.created()
+        this.getDataA()
+      })
     }
   },
   created() {

@@ -5,7 +5,7 @@
         <div class="card-header row">
           <div class="col-sm-6 row">
             <div class="btn-group col-md-offset-6">
-              <button v-for="(item, key) in getStatus" :key="key" @click="setActiveStatus(item)" type="button" class="btn text-md btn-default text-capitalize"> {{ item }} </button>
+              <button v-for="(item, key) in getStatusLR" :key="key" @click="setActiveStatusLR(item)" type="button" class="btn text-md btn-default text-capitalize"> {{ item }} </button>
             </div>
           </div>
           <div class="col-sm-6 row justify-content-end">
@@ -24,23 +24,19 @@
               <th>Name</th>
               <th>Telp</th>
               <th>Email</th>
-              <th>Address</th>
-              <th>Gender</th>
-              <th>Birth</th>
-              <th>Departement</th>
+              <th>Start</th>
+              <th>To</th>
               <th>Status</th>
               <th></th>
             </tr>
             </thead>
             <tbody>
-            <tr v-for="item in getData" :key="item.id">
-              <td>{{item.name}}</td>
+            <tr v-for="item in getDataLR" :key="item.id">
+              <td> {{item.name}}</td>
               <td> {{item.telp}} </td>
               <td> {{item.email}} </td>
-              <td> {{item.address}} </td>
-              <td> {{item.gender}} </td>
-              <td> {{item.birth}} </td>
-              <td> {{item.depart}} </td>
+              <td> {{item.start}} </td>
+              <td> {{item.to}} </td>
               <td> {{item.status}} </td>
               <td>
                 <router-link :to="{name: 'employeeedit', params: { id: item.id }}" tag="a">
@@ -70,41 +66,40 @@ import axios from 'axios'
 export default {
   data() {
     return{
-      activeStatus: "permanent"
+      activeStatusLR: "pending"
     }
   },
   computed: {
     ...mapGetters ({
-      getEmployees : 'getEmployees',
-      getStatus : 'getStatus',
-      getActiveStatus : 'getActiveStatus'
+      getLeaveRequest : 'getLeaveRequest',
+      getStatusLR : 'getStatusLR',
+      getActiveStatusLR : 'getActiveStatusLR'
     }),
-    getData() {
-      return this.getEmployees.filter(ob=>ob.status===this.activeStatus)
+    getDataLR() {
+      return this.getLeaveRequest.filter(ob=>ob.status===this.activeStatusLR)
     },
   },
   methods: {
     ...mapActions ({
-      fetchEmployees : 'fetchEmployees',
-      fetchStatus: 'fetchStatus',
-      setActiveStatus : 'setActiveStatus'
+      fetchLeaveRequest : 'fetchLeaveRequest',
+      fetchStatusLR: 'fetchStatusLR',
+      setActiveStatusLR : 'setActiveStatusLR'
     }),
-    setActiveStatus(a) {
+    setActiveStatusLR(a) {
       // console.log (a)
-      this.activeStatus=a;
+      this.activeStatusLR=a;
     },
     del(id){
-    
-        axios.delete('http://localhost:3000/employees/' + id).then(res =>{
-          alert("Berhasil didelete")
-          this.created()
-          this.getData()
-        })
+      axios.delete('http://localhost:3000/leave-request/' + id).then(res =>{
+        alert("Berhasil didelete")
+        this.created()
+        this.getDataLR()
+      })
     }
   },
   created() {
-    this.fetchEmployees(),
-    this.fetchStatus()
+    this.fetchLeaveRequest(),
+    this.fetchStatusLR()
   },
 }
 </script>

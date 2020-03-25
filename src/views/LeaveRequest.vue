@@ -24,7 +24,7 @@
 
           <!-- Main content -->
           <section class="content">
-						<app-table-applicant></app-table-applicant>
+						<app-table-leave-request></app-table-leave-request>
           </section>
           <!-- /.content -->
         </div>
@@ -37,7 +37,7 @@
 <script>
 import AppHeader from './../components/header/Header.vue'
 import AppMenu from './../components/menu/Menu.vue'
-import AppTableApplicant from './../components/body/TableApplicant.vue'
+import AppTableLeaveRequest from './../components/body/TableLeaveRequest.vue'
 import AppFooter from './../components/footer/Footer.vue'
 
 
@@ -45,7 +45,7 @@ export default {
   components:{
       AppHeader,
 			AppMenu,
-			AppTableApplicant,
+			AppTableLeaveRequest,
       AppFooter
   },
 

@@ -51,14 +51,10 @@ export default {
 	        form: {
 	          id: '',
 	          name: '',
-	          image : '',
 	          telp : '',
 	          email : '',
-	          address : '',
-	          gender: '',
-	          birth: '',
-	          depart: '',
-	          status: '',
+						start: '',
+						to: ''
 	        }
 	    }
 	},

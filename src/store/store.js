@@ -14,10 +14,13 @@ export const store = new Vuex.Store({
     statusA:[],
     activeStatusA: 'all',
 
-    details:[],
-    add:{}
+    leaveRequest:[],
+    statusLR:[],
+    activeStatusLR: 'all',
+
   },
   getters:{
+    // employee
     getEmployees(state) {
       return state.employees
     },
@@ -28,6 +31,7 @@ export const store = new Vuex.Store({
 			return state.activeStatus
     },
   
+    // applicant
     getApplicant(state) {
       return state.applicant
     },
@@ -37,15 +41,21 @@ export const store = new Vuex.Store({
     getActiveStatusA(state) {
 			return state.activeStatusA
     },
-
-    getDetails(state) {
-      return state.details
+  
+    // leave request
+    getLeaveRequest(state) {
+      return state.leaveRequest
     },
-    getAddNew(state) {
-      return state.add
-    }
+    getStatusLR(state) {
+			return state.statusLR
+    },
+    getActiveStatusLR(state) {
+			return state.activeStatusLR
+    },
+
   },
   actions: {
+    // employee
     fetchEmployees ({commit}) {
       console.log("employee")
 			axios.get('http://localhost:3000/employees')
@@ -65,6 +75,7 @@ export const store = new Vuex.Store({
 			commit ('setActiveStatus', payload)
     },
 
+    // applicant
     fetchApplicant ({commit}) {
       console.log("applicant")
 			axios.get('http://localhost:3000/applicant')
@@ -82,13 +93,30 @@ export const store = new Vuex.Store({
     },
     setActiveStatusA({commit}, payload) {
 			commit ('setActiveStatusA', payload)
-    },  
-
-    addToDetails({commit}, payload) {
-      commit ('addToDetails', payload)
-    }
+    },
+      
+    // leave request
+    fetchLeaveRequest ({commit}) {
+      console.log("leaveRequest")
+			axios.get('http://localhost:3000/leave-request')
+				.then(response => {
+					commit ('fillLeaveRequest', response.data)
+				} 
+			)
+    },
+		fetchStatusLR ({commit}) {
+      axios.get('http://localhost:3000/statusLeaveRequest')
+        .then(response => {
+					commit ('fillStatusLR', response.data)  
+				} 
+			)
+    },
+    setActiveStatusLR({commit}, payload) {
+			commit ('setActiveStatusLR', payload)
+    }, 
   },
   mutations: {
+    // employee
     fillEmployees (state, payload) {
 			state.employees = payload
     },
@@ -99,6 +127,7 @@ export const store = new Vuex.Store({
 			state.activeStatus = payload
     },
 
+    // applicant
     fillApplicant (state, payload) {
 			state.applicant = payload
     },
@@ -108,12 +137,17 @@ export const store = new Vuex.Store({
     setActiveStatusA (state, payload) {
 			state.activeStatusA = payload
     },
-  
-    addToDetails (state, payload) {
-      state.details.push(payload)
+
+    // leave request
+    fillLeaveRequest (state, payload) {
+      state.leaveRequest = payload
     },
-    addNew (state, payload) {
-      state.getAddNew = payload
-    }
+    fillStatusLR (state, payload) {
+      state.statusLR = payload
+    },
+    setActiveStatusLR (state, payload) {
+      state.activeStatusLR = payload
+    },
+
   }
 });
