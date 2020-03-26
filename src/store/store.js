@@ -17,7 +17,7 @@ export const store = new Vuex.Store({
     absence:[],
 
     details:[],
-    add:{}
+    add:{},
 
     leaveRequest:[],
     statusLR:[],
@@ -193,18 +193,16 @@ export const store = new Vuex.Store({
     fillStatusLR (state, payload) {
       state.statusLR = payload
     },
-<<<<<<< HEAD
     addNew (state, payload) {
       state.getAddNew = payload
     },
     fillAbsence (state, payload) {
       state.absence = payload
     },
-=======
+
     setActiveStatusLR (state, payload) {
       state.activeStatusLR = payload
     },
 
->>>>>>> 7c5c06743ea36251753a141b15387b76fb95b4f0
   }
 });
