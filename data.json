@@ -14,7 +14,55 @@
       "password": "kompas"
     }
   ],
-  "absence": [
+  "leave-request" : [
+    {
+      "id": "6",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "pending"
+    },
+    {
+      "id": "8",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "approve"
+    },
+    {
+      "id": "4",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "reject"
+    },
+    {
+      "id": "12",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "peding"
+    },
+    {
+      "id": "14",
+      "name": "ana",
+      "telp": "kjguiuguig",
+      "email": "ini@email.com",
+      "start": "2020-03-18",
+      "to": "2020-03-20",
+      "status": "approve"
+    }
+  ],
+
+  "absence" : [
     {
       "id": 1,
       "date": "2020-03-10",
@@ -87,9 +135,8 @@
         }
       ]
     }
-    
   ],
-  "users": [
+  "users" : [
     {
       "id": 1,
       "username": "admin",
@@ -117,18 +164,37 @@
     "interview",
     "unprocessed"
   ],
-  "applicant": [
+
+  "statusLeaveRequest": [
+    "approve",
+    "reject",
+    "pending"
+  ],
+
+  "applicant" : [
     {
-      "id": 1,
-      "name": "angel",
-      "image": "",
-      "telp": 87346345,
-      "email": "ini.applicant@gmail.com",
-      "address": "Jl. Pendidikan 01",
-      "gender": "female",
-      "birth": "1231-02-22",
-      "applyTo": "it",
+      "id" : 1,
+      "name" : "angel",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87346345,
+      "email" : "ini.applicant@gmail.com",
+      "address" : "Jl. Pendidikan 01",
+      "gender": "Female",
+      "birth": "08/06/93",
+      "cv": "creative",
       "status": "unprocessed"
+    },
+    {
+      "id" : 2,
+      "name" : "jordy",
+      "image" : "/src/assets/monster/disruptor.png",
+      "telp" : 87218736,
+      "email" : "ini.applicant@gmail.com",
+      "address" : "Jl. Kesejahteraan 05",
+      "gender": "Male",
+      "birth": "24/11/96",
+      "cv": "it",
+      "status": "psychotest"
     },
     {
       "id": 3,
@@ -139,7 +205,7 @@
       "address": "Jl. Damai 34",
       "gender": "Female",
       "birth": "13/10/94",
-      "applyTo": "creative",
+      "cv": "creative",
       "status": "interview"
     },
     {
@@ -151,7 +217,7 @@
       "address": "Jl. Nusa 562",
       "gender": "Male",
       "birth": "09/03/95",
-      "applyTo": "it",
+      "cv": "it",
       "status": "unprocessed"
     },
     {
@@ -163,7 +229,7 @@
       "address": "Jl. Bhineka 32",
       "gender": "Female",
       "birth": "08/08/94",
-      "applyTo": "creative",
+      "cv": "creative",
       "status": "psychotest"
     },
     {
@@ -175,7 +241,7 @@
       "address": "Jl. Pendidikan 01",
       "gender": "Female",
       "birth": "08/06/93",
-      "applyTo": "accounting",
+      "cv": "accounting",
       "status": "finish"
     },
     {
@@ -187,8 +253,26 @@
       "address": "Jl. Kesejahteraan 05",
       "gender": "Male",
       "birth": "24/11/96",
-      "applyTo": "marketing",
+      "cv": "marketing",
       "status": "psychotest"
+    }
+  ],
+  "calendar" : [
+    {
+      "date" : "10-04-2020",
+      "event" : "Good Friday"
+    },
+    {
+      "date" : "12-04-2020",
+      "event" : "Passover Day"
+    },
+    {
+      "date" : "01-05-2020",
+      "event" : "International Labor Day"
+    },
+    {
+      "date" : "07-05-2020",
+      "event" : "Waisak Day (Buddha's Anniversary)"
     }
   ]
 }

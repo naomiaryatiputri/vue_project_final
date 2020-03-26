@@ -18,8 +18,21 @@ export const store = new Vuex.Store({
 
     details:[],
     add:{}
+
+    leaveRequest:[],
+    statusLR:[],
+    activeStatusLR: 'all',
+
+    calendar: []
   },
+
   getters:{
+    // calemdar
+    getCalendar(state) {
+      return state.calendar
+    },    
+
+    // employee
     getEmployees(state) {
       return state.employees
     },
@@ -30,6 +43,7 @@ export const store = new Vuex.Store({
 			return state.activeStatus
     },
   
+    // applicant
     getApplicant(state) {
       return state.applicant
     },
@@ -39,9 +53,13 @@ export const store = new Vuex.Store({
     getActiveStatusA(state) {
 			return state.activeStatusA
     },
-
-    getDetails(state) {
-      return state.details
+  
+    // leave request
+    getLeaveRequest(state) {
+      return state.leaveRequest
+    },
+    getStatusLR(state) {
+			return state.statusLR
     },
     getAddNew(state) {
       return state.add
@@ -49,8 +67,25 @@ export const store = new Vuex.Store({
     getAbsence(state) {
       return state.absence
     },
+
+    getActiveStatusLR(state) {
+			return state.activeStatusLR
+    },
+
   },
+
   actions: {
+    // calendar
+    fetchCalendar ({commit}) {
+      console.log("calendar")
+			axios.get('http://localhost:3000/calendar')
+				.then(response => {
+					commit ('fillCalendar', response.data)
+				} 
+			)
+    },
+
+    // employee
     fetchEmployees ({commit}) {
       console.log("employee")
 			axios.get('http://localhost:3000/employees')
@@ -70,6 +105,7 @@ export const store = new Vuex.Store({
 			commit ('setActiveStatus', payload)
     },
 
+    // applicant
     fetchApplicant ({commit}) {
       console.log("applicant")
 			axios.get('http://localhost:3000/applicant')
@@ -100,8 +136,35 @@ export const store = new Vuex.Store({
         } 
       )
     },
+      
+    // leave request
+    fetchLeaveRequest ({commit}) {
+      console.log("leaveRequest")
+			axios.get('http://localhost:3000/leave-request')
+				.then(response => {
+					commit ('fillLeaveRequest', response.data)
+				} 
+			)
+    },
+		fetchStatusLR ({commit}) {
+      axios.get('http://localhost:3000/statusLeaveRequest')
+        .then(response => {
+					commit ('fillStatusLR', response.data)  
+				} 
+			)
+    },
+    setActiveStatusLR({commit}, payload) {
+			commit ('setActiveStatusLR', payload)
+    }, 
   },
+
   mutations: {
+    // calendar
+    fillCalendar (state, payload) {
+			state.calendar = payload
+    },
+
+    // employee
     fillEmployees (state, payload) {
 			state.employees = payload
     },
@@ -112,6 +175,7 @@ export const store = new Vuex.Store({
 			state.activeStatus = payload
     },
 
+    // applicant
     fillApplicant (state, payload) {
 			state.applicant = payload
     },
@@ -121,15 +185,26 @@ export const store = new Vuex.Store({
     setActiveStatusA (state, payload) {
 			state.activeStatusA = payload
     },
-  
-    addToDetails (state, payload) {
-      state.details.push(payload)
+
+    // leave request
+    fillLeaveRequest (state, payload) {
+      state.leaveRequest = payload
     },
+    fillStatusLR (state, payload) {
+      state.statusLR = payload
+    },
+<<<<<<< HEAD
     addNew (state, payload) {
       state.getAddNew = payload
     },
     fillAbsence (state, payload) {
       state.absence = payload
     },
+=======
+    setActiveStatusLR (state, payload) {
+      state.activeStatusLR = payload
+    },
+
+>>>>>>> 7c5c06743ea36251753a141b15387b76fb95b4f0
   }
 });

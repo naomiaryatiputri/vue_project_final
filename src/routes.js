@@ -7,13 +7,14 @@ import EmployeeEdit from './views/EmployeeEdit.vue';
 import ApplicantAdd from './views/ApplicantAdd.vue';
 import ApplicantEdit from './views/ApplicantEdit.vue';
 import DataDetails from './views/DataDetails.vue';
+import AddLeaveRequest from './views/AddLeaveRequest.vue';
+import LeaveRequest from './views/LeaveRequest.vue';
 import Login from './views/Login.vue';
 
 export const routes = [
-  { path: '/login', component: Login, name: 'login' },
+
   { path: '/applicant', component: Applicant, name:'applicant'},  
   { path: '/attendance', component: Attendance, name:'attendance'},  
-  { path: '/home', component: Home, name: 'home' },
   { path: '/employee', component: Employee, name:'employee'},
   { path: '/employee/add', component: EmployeeAdd, name: 'employeeadd' },
   { path: '/employee/edit/:id', component: EmployeeEdit, name: 'employeeedit' },
@@ -21,4 +22,9 @@ export const routes = [
   { path: '/applicant/add', component: ApplicantAdd, name: 'applicantadd' },
   { path: '/applicant/edit/:id', component: ApplicantEdit, name: 'applicantedit' },
   { path: '/data-details', component: DataDetails, name: 'data-details' },
+  { path: '/home', component: Home, name: 'home' },
+  { path: '/', component: Login, name: 'login' },
+  { path: '/leave-request', component: LeaveRequest , name: 'leave-request' },
+  { path: '/leave-request/add', component: AddLeaveRequest , name: 'leave-requestadd' },
+
 ];
