@@ -21,7 +21,7 @@
 
           <!-- Main content -->
           <section class="content ml-3 mr-4">
-						<app-form></app-form>
+						<app-form-edit-leave-request></app-form-edit-leave-request>
           </section>
           <!-- /.content -->
         </div>
@@ -33,13 +33,13 @@
 <script>
 import AppHeader from './../components/header/Header.vue'
 import AppMenu from './../components/menu/Menu.vue'
-import AppFormEdit from './../components/body/FormEdit.vue'
+import AppFormEditLeaveRequest from './../components/body/FormEditLeaveRequest.vue'
 import AppFooter from './../components/footer/Footer.vue'
 export default {
     components:{
         AppHeader,
 				AppMenu,
-				AppFormEdit,
+				AppFormEditLeaveRequest,
         AppFooter
     }
 }

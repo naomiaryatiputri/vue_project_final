@@ -13,7 +13,7 @@
               <div class="row mb-2">
                 <!-- Header -->
                 <div class="col-sm-6">
-                  <h1>Add Leave Request</h1>
+                  <h1>Leave Request</h1>
                 </div>
                 <!-- Breadcrums -->
 

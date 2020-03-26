@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div >
 		<div class="col-12 col-lg-9">
 			<form @submit.prevent="add">
 		    <div class="card card-primary card-outline">
@@ -17,12 +17,9 @@
 		                <label for="inputTelp">Telephone</label>
 		                <input type="text" class="form-control" id="inputtelp" name="telp" placeholder="Enter Telephone" v-model="form.telp">
 		            </div>
-	
 	            	<div class="form-group">
 		              <label>Start</label>
-	              
 		                <input type="date" class="form-control" id="dateStart" v-model="form.start">
-
 		            </div>
 		            <div class="form-group">
 		              <label>To</label>
@@ -36,15 +33,13 @@
 		    </div>
 		  </form>
 		</div>
-		
 	</div>
-
 
 </template>
 
 <script>
-// import { mapGetters, mapActions } from 'vuex'
-// import axios from 'axios'
+import { mapGetters, mapActions } from 'vuex'
+import axios from 'axios'
 export default {
 	data(){
 	    return{
@@ -53,37 +48,34 @@ export default {
 	          name: '',
 	          telp : '',
 	          email : '',
-						start: '',
-						to: ''
+						start : '',
+						to : '',
+						status: 'pending'
 	        }
 	    }
 	},
-	// computed: {
-	// 	...mapGetters ({
-	// 		getDetails: 'getDetails'
-	// 	}),
-	// },
-	// methods: {
-	// 	...mapActions({
-	// 		addToDetails : 'addToDetails'
-	// 	}),
-	// 	add(){
+	computed: {
+		...mapGetters ({
+			getDetails: 'getDetails'
+		}),
+	},
+	methods: {
+		...mapActions({
+			addToDetails : 'addToDetails'
+		}),
+		add(){
 
-	//     axios.post('http://localhost:3000/employees/', this.form).then(res =>{
-	//     	alert("Data Berhasil Dimasukkan")
-	//       this.form.name = ''
-	//       this.form.image = ''
-	//       this.form.telp = ''
-	//       this.form.email = ''
-	//       this.form.address = ''
-	//       this.form.gender = ''
-	//       this.form.birth = ''
-	//       this.form.depart = ''
-	//       this.form.status = ''      
-	// 		})
-			
-	//   },
-	// }
+	      	axios.post('http://localhost:3000/leave-request/', this.form).then(res =>{
+	      		alert("Data Berhasil Dimasukkan")
+		        this.form.name = ''
+		        this.form.telp = ''
+		        this.form.email = ''
+						this.form.start = ''
+						this.form.to = ''
+		        this.form.status = ''
+	      	})
+	    },
+	}
 	
 }
 </script>
