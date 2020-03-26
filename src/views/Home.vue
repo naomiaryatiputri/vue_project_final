@@ -30,7 +30,7 @@
                   <span class="info-box-icon"><i class="fas fa-users"></i></span>
                   <div class="info-box-content">
                     <span class="info-box-text text-xl">Total Employee</span>
-                    <span class="info-box-number text-xl">2,000</span>
+                    <span class="info-box-number text-xl">{{ getEmployeesCount(id) }}</span>
                   </div>
                 </div>
               </div>
@@ -65,11 +65,7 @@
               <!-- New Applicant -->
               <app-new-applicant></app-new-applicant>
             </div>
-
           </section>
-
-
-
         </div>
 
         <!-- Footer -->
@@ -83,14 +79,25 @@ import AppMenu from './../components/menu/Menu.vue'
 import AppNewApplicant from './../components/body/NewApplicant.vue'
 import AppCalendar from './../components/body/Calendar.vue'
 import AppFooter from './../components/footer/Footer.vue'
-export default {
-    components:{
-        AppHeader,
-        AppMenu,
-        AppNewApplicant,
-        AppCalendar,
-        AppFooter
+import { mapGetters } from 'vuex'
 
-    }
+export default {
+  components:{
+      AppHeader,
+      AppMenu,
+      AppNewApplicant,
+      AppCalendar,
+      AppFooter
+  },
+  computed: {
+    ...mapGetters ({
+			getEmployees : 'getEmployees',
+		}),
+  },
+	methods: {
+		getEmployeesCount(a) {
+			return this.getEmployees.filter(ob=>ob.id===a.id).length
+		},
+	},
 }
 </script>
