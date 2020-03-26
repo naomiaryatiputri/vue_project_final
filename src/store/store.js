@@ -14,6 +14,8 @@ export const store = new Vuex.Store({
     statusA:[],
     activeStatusA: 'all',
 
+    absence:[],
+
     details:[],
     add:{}
   },
@@ -43,7 +45,10 @@ export const store = new Vuex.Store({
     },
     getAddNew(state) {
       return state.add
-    }
+    },
+    getAbsence(state) {
+      return state.absence
+    },
   },
   actions: {
     fetchEmployees ({commit}) {
@@ -86,7 +91,15 @@ export const store = new Vuex.Store({
 
     addToDetails({commit}, payload) {
       commit ('addToDetails', payload)
-    }
+    },
+    fetchAbsence ({commit}) {
+      console.log("absence")
+      axios.get('http://localhost:3000/absence')
+        .then(response => {
+          commit ('fillAbsence', response.data)
+        } 
+      )
+    },
   },
   mutations: {
     fillEmployees (state, payload) {
@@ -114,6 +127,9 @@ export const store = new Vuex.Store({
     },
     addNew (state, payload) {
       state.getAddNew = payload
-    }
+    },
+    fillAbsence (state, payload) {
+      state.absence = payload
+    },
   }
 });
