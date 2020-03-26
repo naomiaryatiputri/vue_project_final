@@ -401,7 +401,7 @@
       "address" : "Jl. Pendidikan 01",
       "gender": "Female",
       "birth": "08/06/93",
-      "applyTo": "creative",
+      "cv": "creative",
       "status": "unprocessed"
     },
     {
@@ -413,7 +413,7 @@
       "address" : "Jl. Kesejahteraan 05",
       "gender": "Male",
       "birth": "24/11/96",
-      "applyTo": "it",
+      "cv": "it",
       "status": "psychotest"
     },
     {
@@ -425,7 +425,7 @@
       "address" : "Jl. Damai 34",
       "gender": "Female",
       "birth": "13/10/94",
-      "applyTo": "creative",
+      "cv": "creative",
       "status": "interview"
     },
     {
@@ -437,7 +437,7 @@
       "address" : "Jl. Nusa 562",
       "gender": "Male",
       "birth": "09/03/95",
-      "applyTo": "it",
+      "cv": "it",
       "status": "unprocessed"
     },
     {
@@ -449,7 +449,7 @@
       "address" : "Jl. Bhineka 32",
       "gender": "Female",
       "birth": "08/08/94",
-      "applyTo": "creative",
+      "cv": "creative",
       "status": "psychotest"
     },
     {
@@ -461,7 +461,7 @@
       "address" : "Jl. Pendidikan 01",
       "gender": "Female",
       "birth": "08/06/93",
-      "applyTo": "accounting",
+      "cv": "accounting",
       "status": "finish"
     },
     {
@@ -473,7 +473,7 @@
       "address" : "Jl. Kesejahteraan 05",
       "gender": "Male",
       "birth": "24/11/96",
-      "applyTo": "marketing",
+      "cv": "marketing",
       "status": "psychotest"
     }
   ],
