@@ -21,12 +21,12 @@
 	            	<div class="form-group">
 		              <label>Start</label>
 	              
-		                <input type="date" class="form-control" id="date" v-model="form.birth">
+		                <input type="date" class="form-control" id="dateStart" v-model="form.start">
 
 		            </div>
 		            <div class="form-group">
 		              <label>To</label>
-		                <input type="date" class="form-control" id="date" v-model="form.birth">
+		                <input type="date" class="form-control" id="dateTo" v-model="form.to">
 		            </div>
 								
 								<div class="form-group">
