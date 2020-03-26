@@ -476,5 +476,23 @@
       "applyTo": "marketing",
       "status": "psychotest"
     }
+  ],
+  "calendar" : [
+    {
+      "date" : "10-04-2020",
+      "event" : "Good Friday"
+    },
+    {
+      "date" : "12-04-2020",
+      "event" : "Passover Day"
+    },
+    {
+      "date" : "01-05-2020",
+      "event" : "International Labor Day"
+    },
+    {
+      "date" : "07-05-2020",
+      "event" : "Waisak Day (Buddha's Anniversary)"
+    }
   ]
 }
