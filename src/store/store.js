@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios'
+
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
@@ -17,9 +18,15 @@ export const store = new Vuex.Store({
     statusLR:[],
     activeStatusLR: 'all',
 
+    calendar: []
   },
-	
+
   getters:{
+    // calemdar
+    getCalendar(state) {
+      return state.calendar
+    },    
+
     // employee
     getEmployees(state) {
       return state.employees
@@ -54,8 +61,18 @@ export const store = new Vuex.Store({
     },
 
   },
-	
+
   actions: {
+    // calendar
+    fetchCalendar ({commit}) {
+      console.log("calendar")
+			axios.get('http://localhost:3000/calendar')
+				.then(response => {
+					commit ('fillCalendar', response.data)
+				} 
+			)
+    },
+
     // employee
     fetchEmployees ({commit}) {
       console.log("employee")
@@ -116,8 +133,13 @@ export const store = new Vuex.Store({
 			commit ('setActiveStatusLR', payload)
     }, 
   },
-	
+
   mutations: {
+    // calendar
+    fillCalendar (state, payload) {
+			state.calendar = payload
+    },
+
     // employee
     fillEmployees (state, payload) {
 			state.employees = payload
