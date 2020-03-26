@@ -62,11 +62,12 @@
     </div>
   </div>
 </template>
+
 <script>
  
-
 import { mapGetters, mapActions } from 'vuex'
 import axios from 'axios'
+
 export default {
   data() {
     return{
@@ -82,11 +83,6 @@ export default {
     getDataA() {
       return this.getApplicant.filter(ob=>ob.status===this.activeStatusA)
     }
-    // getDataA(){
-    //   var tampung = ""
-    //   tampung = this.getApplicant.filter(ob=>{return ob.statusA==this.activeStatusA})
-    //   return tampung
-    // }
   },
   methods: {
     ...mapActions ({
