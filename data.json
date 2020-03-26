@@ -12,9 +12,48 @@
       "depart": "it",
       "status": "contract",
       "password": "kompas"
+    },
+    {
+      "id": 25,
+      "name": "Naomi",
+      "image": "",
+      "telp": "08982718472",
+      "email": "test@gmail.com",
+      "address": "Jl. Mangga 5 ",
+      "gender": "female",
+      "birth": "1998-01-01",
+      "depart": "it",
+      "status": "permanent",
+      "password": "kompas"
+    },
+    {
+      "id": 26,
+      "name": "Dia",
+      "image": "",
+      "telp": "0192740374832",
+      "email": "dia@gmail.com",
+      "address": "Jl. Kesabaran 109",
+      "gender": "male",
+      "birth": "1999-12-12",
+      "depart": "marketing",
+      "status": "probation",
+      "password": "kompas"
+    },
+    {
+      "id": 27,
+      "name": "Indah Mentari",
+      "image": "",
+      "telp": "09289374832746",
+      "email": "indah@gmail.com",
+      "address": "Jakarta Selatan",
+      "gender": "female",
+      "birth": "1993-06-14",
+      "depart": "it",
+      "status": "probation",
+      "password": "kompas"
     }
   ],
-  "leave-request" : [
+  "leave-request": [
     {
       "id": "6",
       "name": "ana",
@@ -61,15 +100,14 @@
       "status": "approve"
     }
   ],
-
-  "absence" : [
+  "absence": [
     {
       "id": 1,
       "date": "2020-03-10",
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -81,7 +119,7 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -93,7 +131,7 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -105,7 +143,7 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -117,7 +155,7 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -129,14 +167,14 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
       ]
     }
   ],
-  "users" : [
+  "users": [
     {
       "id": 1,
       "username": "admin",
@@ -164,33 +202,31 @@
     "interview",
     "unprocessed"
   ],
-
   "statusLeaveRequest": [
     "approve",
     "reject",
     "pending"
   ],
-
-  "applicant" : [
+  "applicant": [
     {
-      "id" : 1,
-      "name" : "angel",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 87346345,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Pendidikan 01",
+      "id": 1,
+      "name": "angel",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 87346345,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Pendidikan 01",
       "gender": "Female",
       "birth": "08/06/93",
       "cv": "creative",
       "status": "unprocessed"
     },
     {
-      "id" : 2,
-      "name" : "jordy",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 87218736,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Kesejahteraan 05",
+      "id": 2,
+      "name": "jordy",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 87218736,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Kesejahteraan 05",
       "gender": "Male",
       "birth": "24/11/96",
       "cv": "it",
@@ -255,24 +291,48 @@
       "birth": "24/11/96",
       "cv": "marketing",
       "status": "psychotest"
+    },
+    {
+      "id": 8,
+      "name": "Ifa",
+      "image": "",
+      "telp": "09218478342",
+      "email": "test@gmail.com",
+      "address": "Jakarta Timur ",
+      "gender": "female",
+      "birth": "1999-05-26",
+      "applyTo": "accounting",
+      "status": "unprocessed"
+    },
+    {
+      "id": 9,
+      "name": "Tesa",
+      "image": "",
+      "telp": "98278462374",
+      "email": "test@gmail.com",
+      "address": "Megelang",
+      "gender": "female",
+      "birth": "1996-06-30",
+      "applyTo": "accounting",
+      "status": "unprocessed"
     }
   ],
-  "calendar" : [
+  "calendar": [
     {
-      "date" : "10-04-2020",
-      "event" : "Good Friday"
+      "date": "10-04-2020",
+      "event": "Good Friday"
     },
     {
-      "date" : "12-04-2020",
-      "event" : "Passover Day"
+      "date": "12-04-2020",
+      "event": "Passover Day"
     },
     {
-      "date" : "01-05-2020",
-      "event" : "International Labor Day"
+      "date": "01-05-2020",
+      "event": "International Labor Day"
     },
     {
-      "date" : "07-05-2020",
-      "event" : "Waisak Day (Buddha's Anniversary)"
+      "date": "07-05-2020",
+      "event": "Waisak Day (Buddha's Anniversary)"
     }
   ]
 }
