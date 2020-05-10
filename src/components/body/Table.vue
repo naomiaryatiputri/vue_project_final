@@ -71,6 +71,7 @@ export default {
   data() {
     return{
       activeStatus: "permanent"
+
     }
   },
   computed: {
@@ -87,7 +88,8 @@ export default {
     ...mapActions ({
       fetchEmployees : 'fetchEmployees',
       fetchStatus: 'fetchStatus',
-      setActiveStatus : 'setActiveStatus'
+      setActiveStatus : 'setActiveStatus',
+      fetchAbsence : 'fetchAbsence'
     }),
     setActiveStatus(a) {
       // console.log (a)
@@ -104,7 +106,8 @@ export default {
   },
   created() {
     this.fetchEmployees(),
-    this.fetchStatus()
+    this.fetchStatus(),
+    this.fetchAbsence()
   },
 }
 </script>

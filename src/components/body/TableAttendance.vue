@@ -11,10 +11,15 @@
   		        </tr>
   		      </thead>
   		      <tbody>
-  		        <tr v-for="item in employee" :key=item.id>
-  		          <td>Agasta</td>
-  	            <td v-for="items in date" :key=item.id><div v-if="check">{{ item.date }}</div></td>
+
+  		        <tr v-if="check" v-for="item in employee" :key=item.id>
+  		          <td>{{ item.name }}</td>
+  	            <td v-for="items in date" :key=items.id><div v-if="test(item.id,items.date)">{{ checkin }}</div></td>
   		        </tr>
+              <tr v-if="!check" v-for="item in employee" :key=item.id>
+                <td>{{ item.name }}</td>
+                <td v-for="items in date" :key=items.id><div v-if="test(item.id,items.date)">{{ checkout }}</div></td>
+              </tr>
   		        
   		      </tbody>
   		    </table>
@@ -23,10 +28,10 @@
 			</div>
 		  <div class="row justify-content-between">
 				<div>	
-					<button type="button" class="btn btn-info btn-sm">Check In</button>
+					<button type="button" @click="In()" class="btn btn-info btn-sm">Check In</button>
 				</div>
 				<div>	
-					<button type="button" class="btn btn-info btn-sm">Check Out</button>
+					<button type="button" @click="Out()" class="btn btn-info btn-sm">Check Out</button>
 				</div>
 			</div>
     </div>
@@ -41,7 +46,10 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   data() {
     return{
-      activeStatus: "permanent"
+      activeStatus: "permanent",
+      checkin : '20',
+      checkout : '20',
+      check : true
     }
   },
   props: ['item'],
@@ -87,6 +95,25 @@ export default {
           this.created()
           this.getData()
         })
+    },
+    test(id,date){
+        this.checkin = 'Absen'
+        this.checkout = 'Absen' 
+        var abc = this.getAbsence.filter(ob=>ob.date === date)
+        var check = abc[0].data.filter(ob=>ob.user === id)
+        if(check.length == 1){
+          this.checkin = check[0].in
+          this.checkout = check[0].out
+          
+        } 
+        
+        return true
+    },
+    In(){
+    this.check = true
+    },
+    Out(){
+    this.check = false
     }
   },
   created() {

@@ -1,5 +1,11 @@
 <template>
 	<div class="col-12 col-lg-6">
+  <div class="card">
+      <div class="card-header">
+        <button type="button" class="btn btn-success" @click="In()" :disabled="Disable()">In</button>
+        <button type="button" class="btn btn-danger" @click="Out()" :disabled="DisableOut()">Out</button>
+      </div>
+    </div>
     <!-- calendar -->
     <div class="card">
       <div class="card-header">
@@ -36,18 +42,137 @@ import { mapGetters, mapActions } from 'vuex'
 import axios from 'axios'
 
 export default {
+  data(){
+      return{
+          form: {
+            id: '',
+            date:'',
+            data: [{}]
+
+          },
+          disable : false
+      }
+  },
   computed: {
     ...mapGetters ({
       getCalendar : 'getCalendar',
+      getAbsence : 'getAbsence'
     }),
   },
   methods: {
     ...mapActions ({
       fetchCalendar : 'fetchCalendar',
+      fetchAbsence : 'fetchAbsence'
     }),
+    Out(){
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      today = yyyy + '-' + mm + '-' + dd;
+      var check = this.getAbsence.filter(ob => ob.date === today)
+      var checkuser = check[0].data.filter(ob => ob.date === parseInt(this.$cookies.get('login'), 10))
+
+      for (var i = 0; i < check[0].data.length; i++) {
+
+          if(check[0].data[i].user == parseInt(this.$cookies.get('login'), 10)){
+              check[0].data[i].out = time
+          }
+      }
+      
+      axios.put('http://localhost:3000/absence/' + check[0].id , check[0]).then(res => {
+          alert("Berhasil Check Out")
+      }).catch((err) => {
+            console.log(err);
+        
+      })
+
+    },
+    In(){
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        today = yyyy + '-' + mm + '-' + dd;
+        var check = this.getAbsence.filter(ob => ob.date === today)
+        var d = {}
+        d['id']=1
+        d['user']=parseInt(this.$cookies.get('login'), 10)
+        d['in']=time
+        d['out']=''
+
+        if(check.length == 0){
+          this.form.date = today
+          this.form.data[0]['id'] = 1
+          this.form.data[0]['user'] = parseInt(this.$cookies.get('login'), 10)
+          this.form.data[0]['in'] = time
+          this.form.data[0]['out'] = ''
+
+          axios.post('http://localhost:3000/absence/', this.form).then(res =>{
+              alert("Berhasil Check In")
+              location.reload()
+            })   
+        } else {
+
+          check[0].data.push(d)
+          
+          
+          axios.put('http://localhost:3000/absence/' + check[0].id , check[0]).then(res => {
+           alert("Berhasil Check In")
+          }).catch((err) => {
+            console.log(err);
+            
+          })
+        }
+    },
+    Disable(){
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        var check = this.getAbsence.filter(ob => ob.date === today)
+        if(check.length == 0){
+            return false
+        } else {
+            var checkuser = check[0].data.filter(ob => ob.user === parseInt(this.$cookies.get('login'), 10))
+            if(checkuser.length == 0){
+                return false
+            } else {
+                return true
+            }
+        }
+    },
+    DisableOut(){
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        var check = this.getAbsence.filter(ob => ob.date === today)
+        if(check.length == 0){
+            return true
+        } else {
+            var checkuser = check[0].data.filter(ob => ob.user === parseInt(this.$cookies.get('login'), 10))
+            if(checkuser.length == 0){
+                return true
+            } else {
+                if(checkuser[0].out == ''){
+                    return false
+                } else {
+                    return true
+                }
+            }
+        }
+    }
   },
   created() {
-    this.fetchCalendar()
+    this.fetchCalendar(),
+    this.fetchAbsence()
   },
 }
 </script>

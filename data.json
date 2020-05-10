@@ -14,7 +14,7 @@
       "password": "kompas"
     }
   ],
-  "leave-request" : [
+  "leave-request": [
     {
       "id": "6",
       "name": "ana",
@@ -61,15 +61,14 @@
       "status": "approve"
     }
   ],
-
-  "absence" : [
+  "absence": [
     {
       "id": 1,
       "date": "2020-03-10",
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 25,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -81,7 +80,7 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 25,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -93,7 +92,7 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -105,7 +104,7 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -117,7 +116,7 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
@@ -129,14 +128,62 @@
       "data": [
         {
           "id": 1,
-          "user":24,
+          "user": 24,
           "in": "07:45:20",
           "out": "17:00:00"
         }
       ]
+    },
+    {
+      "id": 7,
+      "date": "2020-05-08",
+      "data": [
+        {
+          "id": 1,
+          "user": 24,
+          "in": "1",
+          "out": ""
+        },
+        {
+          "id": 1,
+          "user": 24,
+          "in": "1",
+          "out": ""
+        },
+        {
+          "id": 1,
+          "user": 24,
+          "in": "1",
+          "out": ""
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "date": "2020-05-09",
+      "data": [
+        {
+          "id": 1,
+          "user": 24,
+          "in": "19:44:28",
+          "out": "19:56:7"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "date": "2020-05-10",
+      "data": [
+        {
+          "id": 1,
+          "user": 24,
+          "in": "16:1:23",
+          "out": "16:1:30"
+        }
+      ]
     }
   ],
-  "users" : [
+  "users": [
     {
       "id": 1,
       "username": "admin",
@@ -164,33 +211,31 @@
     "interview",
     "unprocessed"
   ],
-
   "statusLeaveRequest": [
     "approve",
     "reject",
     "pending"
   ],
-
-  "applicant" : [
+  "applicant": [
     {
-      "id" : 1,
-      "name" : "angel",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 87346345,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Pendidikan 01",
+      "id": 1,
+      "name": "angel",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 87346345,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Pendidikan 01",
       "gender": "Female",
       "birth": "08/06/93",
       "cv": "creative",
       "status": "unprocessed"
     },
     {
-      "id" : 2,
-      "name" : "jordy",
-      "image" : "/src/assets/monster/disruptor.png",
-      "telp" : 87218736,
-      "email" : "ini.applicant@gmail.com",
-      "address" : "Jl. Kesejahteraan 05",
+      "id": 2,
+      "name": "jordy",
+      "image": "/src/assets/monster/disruptor.png",
+      "telp": 87218736,
+      "email": "ini.applicant@gmail.com",
+      "address": "Jl. Kesejahteraan 05",
       "gender": "Male",
       "birth": "24/11/96",
       "cv": "it",
@@ -257,22 +302,22 @@
       "status": "psychotest"
     }
   ],
-  "calendar" : [
+  "calendar": [
     {
-      "date" : "10-04-2020",
-      "event" : "Good Friday"
+      "date": "10-04-2020",
+      "event": "Good Friday"
     },
     {
-      "date" : "12-04-2020",
-      "event" : "Passover Day"
+      "date": "12-04-2020",
+      "event": "Passover Day"
     },
     {
-      "date" : "01-05-2020",
-      "event" : "International Labor Day"
+      "date": "01-05-2020",
+      "event": "International Labor Day"
     },
     {
-      "date" : "07-05-2020",
-      "event" : "Waisak Day (Buddha's Anniversary)"
+      "date": "07-05-2020",
+      "event": "Waisak Day (Buddha's Anniversary)"
     }
   ]
 }
