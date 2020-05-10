@@ -113,7 +113,7 @@
 		                <select class="form-control select2" style="width: 100%;" v-model="form.status">
 		                    <option selected="selected">permanent</option>
 		                    <option>contract</option>
-		                    <option>probabation</option>
+		                    <option>probation</option>
 		                </select>
 		            </div>
 		            <div class="form-group">

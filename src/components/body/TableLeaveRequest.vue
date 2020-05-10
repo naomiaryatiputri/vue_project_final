@@ -39,11 +39,10 @@
               <td> {{item.to}} </td>
               <td> {{item.status}} </td>
               <td>
-                <router-link :to="{name: 'employeeedit', params: { id: item.id }}" tag="a">
+                <router-link :to="{name: 'leave-requestedit', params: { id: item.id }}" tag="a">
                   <span class="fas fa-pencil-alt mr-2">
                   </span>
                 </router-link>
-                  
                 
                 <a href="#">
                   <span @click="del(item.id)" class="fas fa-times"></span>
