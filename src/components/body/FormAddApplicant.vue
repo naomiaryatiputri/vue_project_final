@@ -108,7 +108,7 @@
 		        <div class="card-body">
 		            <div class="form-group">
 		                <label for="inputName">Apply to Departement</label>
-		                <select class="form-control select2" style="width: 100%;" v-model="form.applyTo">
+		                <select class="form-control select2" style="width: 100%;" v-model="form.apply">
 		                    <option selected="selected ">creative</option>
 		                    <option>it</option>
 		                    <option>marketing</option>
@@ -142,14 +142,15 @@ export default {
 	        form: {
 	          id: '',
 	          name: '',
-	          image : '',
+	          photo : '',
 	          telp : '',
 	          email : '',
 	          address : '',
 	          gender: '',
 	          birth: '',
 	          apply: '',
-	          status: 'unprocessed'
+	          status: 'unprocessed',
+	          pdf:''
 	        }
 	    }
 	},

@@ -108,7 +108,7 @@
 		        <div class="card-body">
 		            <div class="form-group">
 		                <label for="inputName">Apply to Departement</label>
-		                <select class="form-control select2" style="width: 100%;" v-model="form.applyTo">
+		                <select class="form-control select2" style="width: 100%;" v-model="form.apply">
 		                    <option selected="selected ">creative</option>
 		                    <option>it</option>
 		                    <option>marketing</option>
@@ -152,14 +152,15 @@ export default {
 	        form: {
 	          id: '',
 	          name: '',
-	          image : '',
+	          photo : '',
 	          telp : '',
 	          email : '',
 	          address : '',
 	          gender: '',
 	          birth: '',
-	          applyTo: '',
-	          status: ''
+	          apply: '',
+	          status: '',
+	          pdf:
 	        }
 	    }
 	},
@@ -180,8 +181,8 @@ export default {
             this.form.address = res.data[0].address
             this.form.gender = res.data[0].gender
             this.form.birth = res.data[0].birth
-            this.form.applyTo = res.data[0].apply
-            alert(this.form.applyTo)
+            this.form.apply = res.data[0].apply
+            
             this.form.status = res.data[0].status
           }).catch ((err) => {
             alert("error")
