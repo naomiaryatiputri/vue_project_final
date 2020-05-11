@@ -79,7 +79,7 @@
 		                <label for="exampleInputFile">File input</label>
 		                <div class="input-group">
 		                    <div class="custom-file">
-		                        <input type="file" class="custom-file-input" id="customFile" name="image">
+		                        <input type="file" class="custom-file-input" id="customFile" accept="image/*" name="image" @change="uploadImage($event)">
 		                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
 		                    </div>
 		                    <div class="input-group-append">
@@ -91,7 +91,7 @@
 		                <label for="exampleInputFile">CV input</label>
 		                <div class="input-group">
 		                    <div class="custom-file">
-		                        <input type="file" class="custom-file-input" id="customFile" name="">
+		                        <input type="file" class="custom-file-input" id="customFile" accept="application/pdf" name="image" @change="uploadPDF($event)">
 		                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
 		                    </div>
 		                    <div class="input-group-append">
@@ -113,6 +113,16 @@
 		                    <option>it</option>
 		                    <option>marketing</option>
 		                    <option>accounting</option>
+		                </select>
+
+		            </div>
+		            <div class="form-group">
+		                <label for="inputName">Status</label>
+		                <select class="form-control select2" style="width: 100%;" v-model="form.status">
+		                    <option selected="selected">unprocessed</option>
+		                    <option>finish</option>
+		                    <option>intervew</option>
+		                    <option>psychotest</option>
 		                </select>
 		            </div>
 		            
@@ -170,7 +180,8 @@ export default {
             this.form.address = res.data[0].address
             this.form.gender = res.data[0].gender
             this.form.birth = res.data[0].birth
-            this.form.applyTo = res.data[0].applyTo
+            this.form.applyTo = res.data[0].apply
+            alert(this.form.applyTo)
             this.form.status = res.data[0].status
           }).catch ((err) => {
             alert("error")
@@ -185,6 +196,25 @@ export default {
             console.log(err);
             
           })
+        },
+        processingFile(a, b){
+
+            let filesSelected = a.target.files;
+            let fileToLoad = filesSelected[0];
+            let fileReader = new FileReader();
+            let sef = this;
+            fileReader.onload = function(fileLoadedEvent){
+                if(b == 'photo') sef.form.photo = fileLoadedEvent.target.result;
+                if(b == 'pdf') sef.form.pdf = fileLoadedEvent.target.result;
+            };
+            fileReader.readAsDataURL(fileToLoad);
+            
+        },
+        uploadImage(event) {
+            this.processingFile(event, 'photo');
+        },
+        uploadPDF(event) {
+            this.processingFile(event, 'pdf');
         }
 	}
 	

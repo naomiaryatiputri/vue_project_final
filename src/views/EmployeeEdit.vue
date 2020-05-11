@@ -33,13 +33,13 @@
 <script>
 import AppHeader from './../components/header/Header.vue'
 import AppMenu from './../components/menu/Menu.vue'
-import AppFormEdit from './../components/body/FormEdit.vue'
+import AppForm from './../components/body/FormEdit.vue'
 import AppFooter from './../components/footer/Footer.vue'
 export default {
     components:{
         AppHeader,
 				AppMenu,
-				AppFormEdit,
+				AppForm,
         AppFooter
     }
 }

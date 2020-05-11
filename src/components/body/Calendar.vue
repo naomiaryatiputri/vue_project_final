@@ -1,9 +1,25 @@
 <template>
 	<div class="col-12 col-lg-6">
-  <div class="card">
+  
+    
+        <!-- Profile Image -->
+        <div class="card card-primary card-outline">
+            <div class="card-body box-profile">
+                <div class="text-center">
+                    <img class="profile-user-img img-fluid img-circle" :src="photos()" alt="User profile picture">
+                </div>
+                <h3 class="profile-username text-center">{{ nama }}</h3>
+                <p class="text-muted text-center">{{ title }}</p>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    
+    <div class="card">
       <div class="card-header">
         <button type="button" class="btn btn-success" @click="In()" :disabled="Disable()">In</button>
         <button type="button" class="btn btn-danger" @click="Out()" :disabled="DisableOut()">Out</button>
+        
       </div>
     </div>
     <!-- calendar -->
@@ -50,19 +66,23 @@ export default {
             data: [{}]
 
           },
-          disable : false
+          disable : false,
+          title : '',
+          nama : ''
       }
   },
   computed: {
     ...mapGetters ({
       getCalendar : 'getCalendar',
-      getAbsence : 'getAbsence'
+      getAbsence : 'getAbsence',
+      getEmployees : 'getEmployees'
     }),
   },
   methods: {
     ...mapActions ({
       fetchCalendar : 'fetchCalendar',
-      fetchAbsence : 'fetchAbsence'
+      fetchAbsence : 'fetchAbsence',
+      fetchEmployees : 'fetchEmployees'
     }),
     Out(){
       var today = new Date();
@@ -72,7 +92,7 @@ export default {
       var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
       today = yyyy + '-' + mm + '-' + dd;
       var check = this.getAbsence.filter(ob => ob.date === today)
-      var checkuser = check[0].data.filter(ob => ob.date === parseInt(this.$cookies.get('login'), 10))
+      var checkuser = check[0].data.filter(ob => ob.user === parseInt(this.$cookies.get('login'), 10))
 
       for (var i = 0; i < check[0].data.length; i++) {
 
@@ -168,11 +188,18 @@ export default {
                 }
             }
         }
+    },
+    photos(){
+        var a = this.getEmployees.filter(ob => ob.id === parseInt(this.$cookies.get('login'), 10))
+        this.nama = a[0].name
+        this.title = a[0].depart
+        return a[0].photo
     }
   },
   created() {
     this.fetchCalendar(),
-    this.fetchAbsence()
+    this.fetchAbsence(),
+    this.fetchEmployees()
   },
 }
 </script>

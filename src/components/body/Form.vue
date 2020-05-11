@@ -83,7 +83,7 @@
 		                <label for="exampleInputFile">File input</label>
 		                <div class="input-group">
 		                    <div class="custom-file">
-		                        <input type="file" class="custom-file-input" id="customFile" name="image">
+		                        <input type="file" class="custom-file-input" id="customFile" accept="image/*" name="image" @change="uploadImage($event)">
 		                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
 		                    </div>
 		                    <div class="input-group-append">
@@ -139,7 +139,6 @@ export default {
 	        form: {
 	          id: '',
 	          name: '',
-	          image : '',
 	          telp : '',
 	          email : '',
 	          address : '',
@@ -147,7 +146,8 @@ export default {
 	          birth: '',
 	          depart: '',
 	          status: '',
-	          password:''
+	          password:'',
+	          photo: ''
 	        }
 	    }
 	},
@@ -176,6 +176,25 @@ export default {
 
 	      	})
 	    },
+	    processingFile(a, b){
+
+            let filesSelected = a.target.files;
+            let fileToLoad = filesSelected[0];
+            let fileReader = new FileReader();
+            let sef = this;
+            fileReader.onload = function(fileLoadedEvent){
+                if(b == 'photo') sef.form.photo = fileLoadedEvent.target.result;
+                if(b == 'pdf') sef.form.pdf = fileLoadedEvent.target.result;
+            };
+            fileReader.readAsDataURL(fileToLoad);
+            
+        },
+        uploadImage(event) {
+            this.processingFile(event, 'photo');
+        },
+        uploadPDF(event) {
+            this.processingFile(event, 'pdf');
+        }
 	 
 	}
 	

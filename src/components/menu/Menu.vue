@@ -8,16 +8,7 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <!-- Sidebar user (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div class="image">
-        <a href="#">
-          <img src="../../assets/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image">
-        </a>
-      </div>
-      <div class="info">
-        <a href="#" class="d-block">Rifky Agasta</a>
-      </div>
-    </div>
+    
 
     <!-- Sidebar Menu -->
     <nav class="mt-2">
@@ -109,3 +100,33 @@
   <!-- /.sidebar -->
 </aside>
 </template>
+<script>
+import { mapGetters, mapActions } from 'vuex'
+import axios from 'axios'
+export default {
+  data(){
+      return{
+          photo: ''
+      }
+  },
+  computed: {
+    ...mapGetters ({
+      getEmployees: 'getEmployees'
+    }),
+  },
+  methods: {
+    ...mapActions ({
+      fetchEmployees : 'fetchEmployees'
+    }),
+    photos(){
+        var a = this.getEmployees.filter(ob => ob.id === parseInt(this.$cookies.get('login'), 10))
+        return a[0].photo
+    }
+   
+  },
+    created() {
+    this.fetchEmployees()
+  }
+  
+}
+</script>
