@@ -4,6 +4,7 @@ import Attendance from './views/Attendance.vue';
 import Employee from './views/Employee.vue';
 import EmployeeAdd from './views/EmployeeAdd.vue';
 import EmployeeEdit from './views/EmployeeEdit.vue';
+import EventAdd from './views/EventAdd.vue';
 import ApplicantAdd from './views/ApplicantAdd.vue';
 import ApplicantEdit from './views/ApplicantEdit.vue';
 import DataDetails from './views/DataDetails.vue';
@@ -17,6 +18,7 @@ export const routes = [
   { path: '/attendance', component: Attendance, name:'attendance'},  
   { path: '/employee', component: Employee, name:'employee'},
   { path: '/employee/add', component: EmployeeAdd, name: 'employeeadd' },
+  { path: '/event/add', component: EventAdd, name: 'eventadd' },
   { path: '/employee/edit/:id', component: EmployeeEdit, name: 'employeeedit' },
   { path: '/applicant', component: Applicant, name:'applicant'},
   { path: '/applicant/add', component: ApplicantAdd, name: 'applicantadd' },

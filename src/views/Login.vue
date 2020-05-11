@@ -77,11 +77,8 @@
 				alert("email atau password salah");
 			}
 	      }).catch ((err) => {
-            alert("email atau pword salah")
-            
-          })
-
-	      
+          alert("email atau pword salah")
+        })
 	    }
 	  },
 	  computed: {

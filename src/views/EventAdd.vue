@@ -13,7 +13,7 @@
               <div class="row mb-2">
                 <!-- Header -->
                 <div class="col-sm-6">
-                  <h1>Employee Add</h1>
+                  <h1>Add New Event</h1>
                 </div>
               </div>
             </div>
@@ -21,7 +21,7 @@
 
           <!-- Main content -->
           <section class="content ml-3 mr-4">
-            <app-form></app-form>
+            <app-form-add-event></app-form-add-event>
           </section>
           <!-- /.content -->
         </div>
@@ -33,13 +33,13 @@
 <script>
 import AppHeader from './../components/header/Header.vue'
 import AppMenu from './../components/menu/Menu.vue'
-import AppForm from './../components/body/Form.vue'
+import AppFormAddEvent from './../components/body/FormAddEvent.vue'
 import AppFooter from './../components/footer/Footer.vue'
 export default {
     components:{
         AppHeader,
         AppMenu,
-        AppForm,
+        AppFormAddEvent,
         AppFooter
     }
 }

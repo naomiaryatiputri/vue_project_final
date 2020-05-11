@@ -1,5 +1,5 @@
 <template>
-	<div class="col-12 col-lg-6">
+	<div>
 	  <!-- new applicant -->
 	  <div class="card">
 	    <div class="card-header">

@@ -47,8 +47,6 @@
                   <span class="fas fa-pencil-alt mr-2">
                   </span>
                 </router-link>
-                  
-                
                 <a href="#">
                   <span @click="del(item.id)" class="fas fa-times"></span>
                 </a>

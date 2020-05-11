@@ -16,54 +16,76 @@
                 <div class="col-sm-6">
                   <h1>Dashboard</h1>
                 </div>
+                <div class="col-sm-6">
+                </div>
+
               </div>
             </div>
           </section>
 
           <!-- Main content -->
           <section class="content">
-            <!-- row top -->
-            <div class="row">
-              <div class="col-12 col-sm-6 col-md-4">
-                <!-- total -->
-                <div class="info-box mb-4">
-                  <span class="info-box-icon"><i class="fas fa-users"></i></span>
-                  <div class="info-box-content">
-                    <span class="info-box-text text-xl">Total Employee</span>
-                    <span class="info-box-number text-xl" v-if="Employees()">{{ employee }}</span>
-                  </div>
-                </div>
-              </div>
-              <!-- out -->
-              <div class="col-12 col-sm-6 col-md-4">
-              
-                <div class="info-box mb-4">
-                  <span class="info-box-icon"><i class="fas fa-user"></i></span>
-                  <div class="info-box-content">
-                    <span class="info-box-text text-xl">Out Today</span>
-                    <span class="info-box-number text-xl" v-if="Out()">{{ out }}</span>
-                  </div>
-                </div>
-              </div>
-              <!-- present -->
-              <div class="col-12 col-sm-6 col-md-4">
-                <div class="info-box mb-4">
-                  <span class="info-box-icon"><i class="fas fa-building "></i></span>
-                  <div class="info-box-content">
-                    <span class="info-box-text text-xl">Today's Present</span>
-                    <span class="info-box-number text-xl" v-if="Present()">{{ present }}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <!-- row buttom -->
             <div class="row">
               <!-- Event -->
               <app-calendar></app-calendar>
               
+            <div class="col-12 col-md-6">
+              <!-- row top -->
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <!-- total -->
+                  <div class="info-box mb-4">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-lg">Total</span>
+                      <span class="info-box-text text-center text-lg">Employee</span>
+                      <div class="info-box-icon mx-auto">
+                        <i class="text-center py-2 fas fa-users"></i>
+                      </div>
+                      <span class="info-box-number text-center text-xl" v-if="Employees()">{{ employee }}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <!-- out -->
+                  <div class="info-box mb-4">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-lg">Out</span>
+                      <span class="info-box-text text-center text-lg">Today</span>
+                      <div class="info-box-icon mx-auto">
+                        <i class="text-center py-2 fas fa-user"></i>
+                      </div>
+                      <span class="info-box-number text-center text-xl" v-if="Out()">{{ out }}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <!-- present -->
+                  <div class="info-box mb-4">
+                    <div class="info-box-content">
+                      <span class="info-box-text text-center text-lg">Today's</span>
+                      <span class="info-box-text text-center text-lg">Present</span>
+                      <div class="info-box-icon mx-auto">
+                        <i class="text-center py-2 fas fa-building"></i>
+                      </div>
+                      <span class="info-box-number text-center text-xl" v-if="Present()">{{ present }}</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
               <!-- New Applicant -->
               <app-new-applicant></app-new-applicant>
+            </div>
+
+
+
+
             </div>
 
           </section>
@@ -175,12 +197,11 @@ export default {
     this.fetchAbsence()
   },
   components:{
-        AppHeader,
-        AppMenu,
-        AppNewApplicant,
-        AppCalendar,
-        AppFooter
-
+    AppHeader,
+    AppMenu,
+    AppNewApplicant,
+    AppCalendar,
+    AppFooter
   },
     beforeRouteEnter (to, from, next) {
       $cookies.get('login') ? next() : next({ name: 'login', query: { redirect: 'home' } })

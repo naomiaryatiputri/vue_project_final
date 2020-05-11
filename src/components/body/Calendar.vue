@@ -1,7 +1,7 @@
 <template>
 	<div class="col-12 col-lg-6">
-  
-    
+    <div class="">
+  	  <div>
         <!-- Profile Image -->
         <div class="card card-primary card-outline">
             <div class="card-body box-profile">
@@ -14,14 +14,19 @@
             <!-- /.card-body -->
         </div>
         <!-- /.card -->
-    
-    <div class="card">
-      <div class="card-header">
-        <button type="button" class="btn btn-success" @click="In()" :disabled="Disable()">In</button>
-        <button type="button" class="btn btn-danger" @click="Out()" :disabled="DisableOut()">Out</button>
-        
-      </div>
+
+        <div class="card">
+          <div class="card-header row">
+            <h1 class="col-6 my-auto text-center">Absence</h1>
+            <div class="col">
+              <button type="button" class="btn btn-block btn-success" @click="In()" :disabled="Disable()">In</button>
+              <button type="button" class="btn btn-block btn-warning" @click="Out()" :disabled="DisableOut()">Out</button>
+            </div>
+          </div>
+        </div>
+  	  </div>
     </div>
+
     <!-- calendar -->
     <div class="card">
       <div class="card-header">
@@ -38,6 +43,7 @@
               <th style="width: 10px"></th>
               <th style="width: 45px">Date</th>
               <th style="width: 45px">Label</th>
+              <th style="width: 5px"></th>
             </tr>
           </thead>
           <tbody>
@@ -45,10 +51,18 @@
               <td><i class="nav-icon fas fa-calendar text-lg"></i></td>
               <td> {{item.date}} </td>
               <td> {{item.event}} </td>
+              <td>                
+                <div style="cursor:pointer;">
+                  <span @click="del(item.id)" class="fas fa-times"></span>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
+      <div class="card-footer text-center">
+	      <a href="/event/add">Add New Event</a>
+	    </div>
     </div>
   </div>
 </template>
@@ -56,6 +70,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import axios from 'axios'
+
 
 export default {
   data(){
@@ -84,6 +99,14 @@ export default {
       fetchAbsence : 'fetchAbsence',
       fetchEmployees : 'fetchEmployees'
     }),
+    del(id){
+  
+      axios.delete('http://localhost:3000/employees/' + id).then(res =>{
+        alert("Berhasil didelete")
+        this.created()
+        this.getData()
+      })
+    },
     Out(){
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, '0');
@@ -167,27 +190,27 @@ export default {
         }
     },
     DisableOut(){
-        var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        var yyyy = today.getFullYear();
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
 
-        today = yyyy + '-' + mm + '-' + dd;
-        var check = this.getAbsence.filter(ob => ob.date === today)
-        if(check.length == 0){
-            return true
-        } else {
-            var checkuser = check[0].data.filter(ob => ob.user === parseInt(this.$cookies.get('login'), 10))
-            if(checkuser.length == 0){
-                return true
-            } else {
-                if(checkuser[0].out == ''){
-                    return false
-                } else {
-                    return true
-                }
-            }
-        }
+      today = yyyy + '-' + mm + '-' + dd;
+      var check = this.getAbsence.filter(ob => ob.date === today)
+      if(check.length == 0){
+          return true
+      } else {
+          var checkuser = check[0].data.filter(ob => ob.user === parseInt(this.$cookies.get('login'), 10))
+          if(checkuser.length == 0){
+              return true
+          } else {
+              if(checkuser[0].out == ''){
+                  return false
+              } else {
+                  return true
+              }
+          }
+      }
     },
     photos(){
         var a = this.getEmployees.filter(ob => ob.id === parseInt(this.$cookies.get('login'), 10))

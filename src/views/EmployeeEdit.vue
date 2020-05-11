@@ -13,7 +13,7 @@
               <div class="row mb-2">
                 <!-- Header -->
                 <div class="col-sm-6">
-                  <h1>Profile</h1>
+                  <h1>Employee Edit</h1>
                 </div>
               </div>
             </div>
