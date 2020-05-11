@@ -40,7 +40,7 @@
               <td> {{item.address}} </td>
               <td> {{item.gender}} </td>
               <td> {{item.birth}} </td>
-              <td> {{item.cv}} </td>
+              <td> {{item.apply}} </td>
               <td> {{item.status}} </td>
               <td>
                 <router-link :to="{name: 'applicantedit', params: { id: item.id }}" tag="a">

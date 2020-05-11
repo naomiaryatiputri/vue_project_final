@@ -160,7 +160,7 @@ export default {
 	          birth: '',
 	          apply: '',
 	          status: '',
-	          pdf:
+	          pdf: ''
 	        }
 	    }
 	},
