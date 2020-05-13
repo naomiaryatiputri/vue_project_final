@@ -5,16 +5,16 @@
         <div class="card-header row">
           <div class="col-sm-6 row">
             <div class="btn-group col-md-offset-6">
-              <button v-for="(item, key) in getStatusA" :key="key" @click="setActiveStatusA(item)" type="button" class="btn text-md btn-default text-capitalize"> {{ item }} </button>
+              <button v-for="(item, key) in getStatusA" :key="key" @click="setActiveStatusA(item)" type="button" class="btn bg-info text-md btn-default text-capitalize"> {{ item }} </button>
             </div>
           </div>
-          <div class="col-sm-6 row justify-content-end">
+          <!-- <div class="col-sm-6 row justify-content-end">
             <div class="btn-group col-md-offset-6">
-              <button type="button" class="btn bg-info text-md btn-default"> Eksport CSV </button>
-              <button type="button" class="btn bg-info text-md btn-default"> Import CSV </button>
-              <button type="button" class="btn bg-info text-md btn-default"> Eksport CSV </button>
+              <button type="button" class="btn text-md btn-default"> Eksport CSV </button>
+              <button type="button" class="btn text-md btn-default"> Import CSV </button>
+              <button type="button" class="btn text-md btn-default"> Eksport CSV </button>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- /.card-header -->
         <div class="card-body">

@@ -8,8 +8,8 @@
                 <div class="text-center">
                     <img class="profile-user-img img-fluid img-circle" :src="photos()" alt="User profile picture">
                 </div>
-                <h3 class="profile-username text-center">{{ nama }}</h3>
-                <p class="text-muted text-center">{{ title }}</p>
+                <h3 class="text-center ">{{ nama }}</h3>
+                <h4 class="font-weight-bold text-muted text-center text-uppercase">{{ title }}</h4>
             </div>
             <!-- /.card-body -->
         </div>
@@ -17,7 +17,7 @@
 
         <div class="card">
           <div class="card-header row">
-            <h1 class="col-6 my-auto text-center">Absence</h1>
+            <h3 class="col-4 my-auto text-center">Absence</h3>
             <div class="col">
               <button type="button" class="btn btn-block btn-success" @click="In()" :disabled="Disable()">In</button>
               <button type="button" class="btn btn-block btn-warning" @click="Out()" :disabled="DisableOut()">Out</button>

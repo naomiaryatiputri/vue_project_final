@@ -14,7 +14,7 @@
               <div class="row mb-2">
                 <!-- Header -->
                 <div class="col-sm-6">
-                  <h1>Dashboard</h1>
+                  <h1 class="font-weight-bold">Dashboard</h1>
                 </div>
                 <div class="col-sm-6">
                 </div>
@@ -30,7 +30,7 @@
               <!-- Event -->
               <app-calendar></app-calendar>
               
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <!-- row top -->
               <div class="row">
                 <div class="col-12 col-md-4">

@@ -27,7 +27,7 @@ export const store = new Vuex.Store({
   },
 
   getters:{
-    // calemdar
+    // calendar
     getCalendar(state) {
       return state.calendar
     },    
