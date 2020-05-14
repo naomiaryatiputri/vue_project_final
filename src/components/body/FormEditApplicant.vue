@@ -105,7 +105,7 @@
 		                <select class="form-control select2" style="width: 100%;" v-model="form.status">
 		                    <option selected="selected">unprocessed</option>
 		                    <option>finish</option>
-		                    <option>intervew</option>
+		                    <option>interview</option>
 		                    <option>psychotest</option>
 		                </select>
 		            </div>
